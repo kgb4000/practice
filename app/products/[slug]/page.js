@@ -8,6 +8,7 @@ import Price from '@/components/Price'
 import Natural from '@/components/Natural'
 import Stars from '@/components/Stars'
 import CustomerReviewsApp from '@/components/CustomerReviewsApp'
+import { limitFill } from '@cloudinary/url-gen/actions/resize'
 
 export async function getProductSlug(slug) {
   const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT, {
@@ -126,7 +127,9 @@ export default async function Product({ params }) {
                 <div className="text-center mx-auto">
                   <a href={`/products/${product.slug}`}>
                     <Image
-                      src={buildImage(product.image[0].public_id).toURL()}
+                      src={buildImage(product.image[0].public_id)
+                        .resize(limitFill().width(400).height(400))
+                        .toURL()}
                       alt={product.name}
                       className="mx-auto"
                       width={400}

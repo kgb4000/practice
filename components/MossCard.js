@@ -20,10 +20,12 @@ const MossCard = ({ changeBigMossImage, bigMossImage, product, index }) => {
     >
       <div className="flex justify-center">
         <Image
-          src={buildImage(product.image[index].public_id).toURL()}
+          src={buildImage(product.image[index].public_id)
+            .resize(thumbnail().width(200).height(200))
+            .toURL()}
           alt={product.name}
-          width={100}
-          height={100}
+          width={200}
+          height={200}
           style={{
             width: '60%',
             heigth: 'auto',

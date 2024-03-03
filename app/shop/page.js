@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { GraphQLClient, gql } from 'graphql-request'
 import { buildImage } from '@/lib/cloudinary/cloudinary'
 import CallToAction from '@/components/CallToAction'
+import { limitFill } from '@cloudinary/url-gen/actions/resize'
 
 const hygraph = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT)
 
