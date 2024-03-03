@@ -59,10 +59,10 @@ const TrackOrder = () => {
         <div className="max-w-7xl mx-auto mt-40 mb-20 px-8">
           <h1 className="text-5xl text-center">Track Your order</h1>
           <p className="text-xl text-center my-4">
-            You can track your order 2 days after it has been received.
+            Track your order 2 days after you ordered it.
           </p>
           <div className="my-8 flex flex-col">
-            <form className="mx-auto">
+            <form className="mx-auto ">
               <div>
                 <input className="w-full border py-2 px-4 mb-2" />
               </div>
@@ -76,7 +76,7 @@ const TrackOrder = () => {
             </form>
           </div>
           <div className="my-14">
-            <h2 className="text-5xl text-center">You May Also Like</h2>
+            <h2 className="text-5xl text-center">Have You Tried Theese?</h2>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 justify-between my-20">
             <a href="/products/soursop-sea-moss-gel-16oz">

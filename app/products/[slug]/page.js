@@ -114,7 +114,7 @@ export default async function Product({ params }) {
           </div>
         </div>
       </section>
-      <MoreInfo product={product} />
+      {/* <MoreInfo product={product} /> */}
       <section>
         <div className="container max-w-7xl mx-auto my-20">
           <h2 className="text-5xl text-center mb-20">
