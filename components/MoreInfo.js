@@ -1,5 +1,6 @@
 'use client'
 
+import { RichText } from '@graphcms/rich-text-react-renderer'
 import { Disclosure } from '@headlessui/react'
 
 const MoreInfo = ({ product }) => {
@@ -32,7 +33,16 @@ const MoreInfo = ({ product }) => {
                   <span className="text-2xl font-bold">+</span>
                 </Disclosure.Button>
                 <Disclosure.Panel>
-                  <p>{product.ingredients}</p>
+                  <RichText
+                    content={product.ingredients.raw}
+                    renderers={{
+                      li: ({ children }) => (
+                        <li className="font-normal lg:my-5 list-disc ml-4">
+                          {children}
+                        </li>
+                      ),
+                    }}
+                  />
                 </Disclosure.Panel>
               </>
             )}
@@ -42,11 +52,20 @@ const MoreInfo = ({ product }) => {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex justify-between w-full items-center">
-                  <span className="text-xl font-semibold my-2">More Info</span>
+                  <span className="text-xl font-semibold my-2">Benefits</span>
                   <span className="text-2xl font-bold">+</span>
                 </Disclosure.Button>
                 <Disclosure.Panel>
-                  <p>{product.more}</p>
+                  <RichText
+                    content={product.benefits.raw}
+                    renderers={{
+                      li: ({ children }) => (
+                        <li className="leading-relaxed font-normal lg:my-5 list-disc">
+                          {children}
+                        </li>
+                      ),
+                    }}
+                  />
                 </Disclosure.Panel>
               </>
             )}
@@ -60,7 +79,7 @@ const MoreInfo = ({ product }) => {
                   <span className="text-2xl font-bold">+</span>
                 </Disclosure.Button>
                 <Disclosure.Panel>
-                  <p>{product.flavor}</p>
+                  <RichText content={product.flavor.raw} />
                 </Disclosure.Panel>
               </>
             )}
@@ -74,7 +93,14 @@ const MoreInfo = ({ product }) => {
                   <span className="text-2xl font-bold">+</span>
                 </Disclosure.Button>
                 <Disclosure.Panel>
-                  <p>{product.shipping}</p>
+                  <RichText
+                    content={product.shipping.raw}
+                    renderers={{
+                      p: ({ children }) => (
+                        <p className="font-normal lg:my-5">{children}</p>
+                      ),
+                    }}
+                  />
                 </Disclosure.Panel>
               </>
             )}
@@ -90,7 +116,14 @@ const MoreInfo = ({ product }) => {
                   <span className="text-2xl font-bold">+</span>
                 </Disclosure.Button>
                 <Disclosure.Panel>
-                  <p>{product.returnPolicy}</p>
+                  <RichText
+                    content={product.returnPolicy.raw}
+                    renderers={{
+                      p: ({ children }) => (
+                        <p className="font-normal lg:my-5">{children}</p>
+                      ),
+                    }}
+                  />
                 </Disclosure.Panel>
               </>
             )}

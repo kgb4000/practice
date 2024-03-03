@@ -18,10 +18,7 @@ const TermsOfService = () => {
       <section>
         <div className="container max-w-3xl mx-auto my-40">
           <h1 className="text-5xl my-8 text-center">Terms of Service</h1>
-          <p className="text-2xl my-4">Overview</p>
-          <p className="text-2xl mb-4 font-semibold">
-            Welcome to Sea Moss Wellness.
-          </p>
+          <p className="text-2xl mb-4">Welcome to Sea Moss Wellness.</p>
           <p className="text-xl mb-4">
             Throughout these Terms of Service, the terms “we”, “us”, and “our”
             refer to Sea Moss Wellness.
@@ -56,9 +53,9 @@ const TermsOfService = () => {
             your responsibility to check for updates. Continued use after
             updates means acceptance of the changes.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 1 - Online Store Terms
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             By agreeing to these Terms, you confirm that you are at least the
             age of majority in your state or province of residence, or that you
@@ -73,9 +70,9 @@ const TermsOfService = () => {
             Breach of these Terms results in an immediate termination of your
             Services.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 2 - General Conditions
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             We reserve the right to refuse service to anyone at any time.
           </p>
@@ -88,9 +85,9 @@ const TermsOfService = () => {
             exploitation of any part of the Service or website without our
             permission is prohibited.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 3 - Accuracy, Completeness and Timeliness of Information
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             We are not responsible if information on our site is not accurate,
             complete, or current. The material is provided for general
@@ -101,9 +98,9 @@ const TermsOfService = () => {
             Our site may contain historical information, provided for reference
             only.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 4 - Modifications to the Service and Prices
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             Prices for our products are subject to change without notice.
           </p>
@@ -115,9 +112,9 @@ const TermsOfService = () => {
             We are not liable for any modification, price change, suspension, or
             discontinuance of the Service.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 5 - Products or Services
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             Some products or services are available exclusively online. These
             products or services may have limited quantities and are subject to
@@ -136,9 +133,9 @@ const TermsOfService = () => {
             All product descriptions and pricing are subject to change at any
             time without notice.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 6 - Accuracy of Billing and Account Information
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             We reserve the right to refuse any order. We may limit or cancel
             quantities purchased per person, per household, or per order.
@@ -147,9 +144,9 @@ const TermsOfService = () => {
             You agree to provide current, complete, and accurate purchase and
             account information for all purchases made at our store.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 7 - Optional Tools
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             We may provide access to third-party tools over which we have no
             control or input.
@@ -159,9 +156,9 @@ const TermsOfService = () => {
             and you should ensure you approve of the terms on which tools are
             provided by third-party providers.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 8 - Third-Party Links
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             Some content, products, and services available via our Service may
             include materials from third-parties.
@@ -174,9 +171,9 @@ const TermsOfService = () => {
             Complaints, claims, concerns, or questions regarding third-party
             products should be directed to the third-party.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 9 - User Comments, Feedback, and Other Submissions
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             If you send us comments, suggestions, proposals, plans, or other
             materials, whether online, by email, postal mail, or otherwise, we
@@ -187,16 +184,16 @@ const TermsOfService = () => {
             We are not responsible for any comments posted by you or any
             third-party.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 10 - Personal Information
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             Your submission of personal information through the store is
             governed by our Privacy Policy.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 11 - Errors, Inaccuracies, and Omissions
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             There may be information on our site that contains errors,
             inaccuracies, or omissions related to product descriptions, pricing,
@@ -205,9 +202,9 @@ const TermsOfService = () => {
             inaccuracies, or omissions, and to change or update information or
             cancel orders if any information in the Service is inaccurate at any
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 12 - Intellectual Property Rights
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             All content included on the site, such as text, graphics, logos,
             images, as well as the compilation thereof, and any software used on
@@ -217,9 +214,9 @@ const TermsOfService = () => {
             any portion of the Service, or access to the Service or any contact
             on the website, without express written permission from us.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 13 - Dispute Resolution
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             Any disputes or claims arising out of or in connection with these
             Terms of Service shall be amicably resolved through negotiation. If
@@ -228,9 +225,9 @@ const TermsOfService = () => {
             Arbitration Association, and the decision of the arbitrator shall be
             final and binding.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 14 - Limitation of Liability
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             Sea Moss Wellness shall not be liable for any indirect, incidental,
             special, consequential or punitive damages, including without
@@ -243,9 +240,9 @@ const TermsOfService = () => {
             (including negligence) or any other legal theory, whether or not we
             have been informed of the possibility of such damage.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 15 - User Conduct and Responsibilities
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             Users are expected to use the website and services in a responsible
             and ethical manner. Any use of the site for illegal, harmful, or
@@ -254,18 +251,18 @@ const TermsOfService = () => {
             for ensuring that their use of the site complies with all applicable
             laws and regulations.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 16 - Termination Clause
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             We reserve the right to terminate or suspend your account and bar
             access to the Service immediately, without prior notice or
             liability, under our sole discretion, for any reason whatsoever,
             including without limitation if you breach the Terms.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 17 - Warranty Disclaimer
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             The service and all products and services delivered to you through
             the service are provided 'as is' and 'as available' without any
@@ -274,9 +271,9 @@ const TermsOfService = () => {
             of merchantability, quality, fitness for a particular purpose,
             durability, title, and non-infringement.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 18 - Indemnification Clause
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             You agree to indemnify, defend, and hold harmless Sea Moss Wellness
             and its parent, subsidiaries, affiliates, partners, officers,
@@ -287,9 +284,9 @@ const TermsOfService = () => {
             the documents they incorporate by reference, or your violation of
             any law or the rights of a third-party.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 19 - Amendment Procedures
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             We reserve the right, at our sole discretion, to update, change, or
             replace any part of these Terms by posting updates and changes to
@@ -298,18 +295,18 @@ const TermsOfService = () => {
             website or the Service following the posting of any changes to these
             Terms constitutes acceptance of those changes.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 20 - Accessibility and Inclusivity
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             Sea Moss Wellness is committed to ensuring digital accessibility for
             people with disabilities. We are continually improving the user
             experience for everyone and applying the relevant accessibility
             standards.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 21 - Data Retention and Deletion Policy
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             We retain personal data only for as long as necessary to provide the
             services you have requested and thereafter for a variety of
@@ -319,9 +316,9 @@ const TermsOfService = () => {
             enforcing our legal/contractual rights; or needed to maintain
             adequate and accurate business and financial records.
           </p>
-          <p className="text-2xl mb-4 font-semibold">
+          <h2 className="text-2xl mb-4 font-semibold">
             Section 22 - Contact Information
-          </p>
+          </h2>
           <p className="text-xl mb-4">
             For any questions or concerns about these Terms of Service, please
             contact us at{' '}

@@ -81,7 +81,7 @@ const TrackOrder = () => {
             <h2 className="text-5xl text-center">You May Also Like</h2>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 justify-between my-20">
-            <RefreshLink href="/products/soursop-sea-moss-gel-16oz">
+            <a href="/products/soursop-sea-moss-gel-16oz">
               <Image
                 src="https://res.cloudinary.com/browne-company/image/upload/v1708203042/soursopSeaMossGelAssets/SMW-SMG16oz-SOURSOP-V1_q3xzso.png"
                 alt="Soursop Sea Moss Gel."
@@ -89,8 +89,8 @@ const TrackOrder = () => {
                 height={400}
                 className="mx-auto"
               />
-            </RefreshLink>
-            <RefreshLink href="/products/pinapple-sea-moss-gel-16oz">
+            </a>
+            <a href="/products/pinapple-sea-moss-gel-16oz">
               <Image
                 src="https://res.cloudinary.com/browne-company/image/upload/v1708120768/pineappleSeaMossGelAssets/SMW-SMG16oz-PINEAPPLE-V1_p77dzz.png"
                 alt="Pineapple Sea Moss Gel."
@@ -98,8 +98,8 @@ const TrackOrder = () => {
                 height={400}
                 className="mx-auto"
               />
-            </RefreshLink>
-            <RefreshLink href="/products/mango-sea-moss-gel-16oz">
+            </a>
+            <a href="/products/mango-sea-moss-gel-16oz">
               <Image
                 src="https://res.cloudinary.com/browne-company/image/upload/v1708110923/mangoSeaMossGelAssets/SMW-SMG16oz-MANGO-V1_qsmgzk.png"
                 alt="Mango Sea Moss Gel."
@@ -107,8 +107,8 @@ const TrackOrder = () => {
                 height={400}
                 className="mx-auto"
               />
-            </RefreshLink>
-            <RefreshLink href="/products/strawberry-sea-moss-gel-16oz">
+            </a>
+            <a href="/products/strawberry-sea-moss-gel-16oz">
               <Image
                 src="https://res.cloudinary.com/browne-company/image/upload/v1708111033/strawberrySeaMossGelAssets/SMW-SMG16oz-STRAWBERRY-V1_fx3d4d.png"
                 alt="Strawberry Sea Moss Gel."
@@ -116,7 +116,7 @@ const TrackOrder = () => {
                 height={400}
                 className="mx-auto"
               />
-            </RefreshLink>
+            </a>
           </div>
         </div>
       </section>

@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import RefreshLink from '@/components/RefreshLink'
 
 import kesBg from '@/public/images/kes-founder.jpeg'
 

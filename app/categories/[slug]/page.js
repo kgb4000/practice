@@ -7,7 +7,6 @@ import { buildImage } from '@/lib/cloudinary/cloudinary'
 import CallToAction from '@/components/CallToAction'
 import DriedSeaMoss from '@/components/DriedSeaMoss'
 import SeaMossGels from '@/components/SeaMossGels'
-import RefreshLink from '@/components/RefreshLink'
 
 async function getCategorySlug(slug) {
   const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT, {

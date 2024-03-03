@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { GraphQLClient, gql } from 'graphql-request'
 import { buildImage } from '@/lib/cloudinary/cloudinary'
 import CallToAction from '@/components/CallToAction'
-import RefreshLink from '@/components/RefreshLink'
 
 const hygraph = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT)
 
@@ -137,15 +136,25 @@ export default async function Shop() {
             <h2 className="text-3xl mb-5 font-bold">How To Use Sea Moss?</h2>
             <p className="text-xl leading-10 mb-4">
               To use{' '}
-              <Link href="/categories/dried-sea-moss">dried sea moss</Link>,
+              <Link
+                href="/categories/dried-sea-moss"
+                className="text-red-500 underline"
+              >
+                dried sea moss
+              </Link>{' '}
               first rinse it thoroughly to remove any debris, then soak it in
               water for at least 12-24 hours until it expands and softens. After
               soaking, blend it with fresh water until smooth to create a gel.
             </p>
             <p className="text-xl leading-10 mb-4">
-              <Link href="/categories/sea-moss-gels">Sea moss gel</Link> can be
-              used by incorporating it into smoothies, teas, soups, and sauces
-              as a thickening agent, or applied directly to the skin as a
+              <Link
+                href="/categories/sea-moss-gels"
+                className="text-red-500 underline"
+              >
+                Sea moss gel
+              </Link>{' '}
+              can be used by incorporating it into smoothies, teas, soups, and
+              sauces as a thickening agent, or applied directly to the skin as a
               moisturizing face mask. Both forms offer a versatile way to enjoy
               the health benefits of sea moss.
             </p>

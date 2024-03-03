@@ -36,7 +36,7 @@ export default function Home() {
       <OurCompany />
       <Shop />
       <section className="bg-yellow-100 py-10">
-        <div className="container max-w-9xl mx-auto my-20">
+        <div className="container max-w-7xl mx-auto my-20">
           <div className="lg:grid grid-cols-2 items-center gap-x-10 h-full">
             <Image
               src={womanBg}
@@ -51,20 +51,20 @@ export default function Home() {
             />
             <div className="px-4 my-10 py-10">
               <h2 className="text-4xl lg:text-5xl text-center lg:text-left mb-4">
-                Start Changing What You Eat
+                Change What You Eat
               </h2>
-              <p className="text-xl mb-4 leading-loose">
+              {/* <p className="text-xl mb-4 leading-loose">
                 Eating processed foods and red meat is linked to an increased
                 risk of heart disease, obesity, diabetes, and certain cancers,
                 advocating for a transition to diets rich in fruits, vegetables,
                 whole grains, and lean proteins.
-              </p>
+              </p> */}
               <p className="text-xl mb-4 leading-loose">
                 Changing what we eat is not merely a personal choice but a
                 necessity to foster a healthier you.
               </p>
               <p className="text-xl mb-4 leading-loose">
-                Consuming superfoods like sea moss can help:
+                Consuming organic foods like sea moss can help:
               </p>
               <p className="text-xl mb-4 leading-loose">
                 <b>Reduced Risk of Chronic Diseases:</b> Studies show that

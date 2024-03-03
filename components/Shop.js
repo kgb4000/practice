@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { GraphQLClient, gql } from 'graphql-request'
 import { buildImage } from '@/lib/cloudinary/cloudinary'
-import RefreshLink from '@/components/RefreshLink'
 
 const hygraph = new GraphQLClient(
   'https://api-us-east-1.hygraph.com/v2/clc75eeyc1srk01t6gd17elvj/master'

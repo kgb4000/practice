@@ -8,7 +8,6 @@ import Price from '@/components/Price'
 import Natural from '@/components/Natural'
 import Stars from '@/components/Stars'
 import CustomerReviewsApp from '@/components/CustomerReviewsApp'
-import RefreshLink from '@/components/RefreshLink'
 
 export async function getProductSlug(slug) {
   const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT, {
@@ -28,11 +27,21 @@ export async function getProductSlug(slug) {
             slug
             image
             origin
-            more
-            ingredients
-            flavor
-            shipping
-            returnPolicy
+            ingredients {
+              raw
+            }
+            flavor {
+              raw
+            }
+            shipping {
+              raw
+            }
+            returnPolicy {
+              raw
+            }
+            benefits {
+              raw
+            }
             faq {
               question
               answer
@@ -115,7 +124,7 @@ export default async function Product({ params }) {
             {data[0].products.map((product) => (
               <div key={product.id}>
                 <div className="text-center mx-auto">
-                  <RefreshLink href={`/products/${product.slug}`}>
+                  <a href={`/products/${product.slug}`}>
                     <Image
                       src={buildImage(product.image[0].public_id).toURL()}
                       alt={product.name}
@@ -132,7 +141,7 @@ export default async function Product({ params }) {
                       {product.name}
                     </p>
                     <p className="my-5 font-semibold">${product.price}</p>
-                  </RefreshLink>
+                  </a>
                 </div>
               </div>
             ))}
