@@ -4,8 +4,9 @@ import React from 'react'
 import { useState } from 'react'
 import Image from 'next/image'
 import MossCard from '@/components/MossCard'
+import MainheroImage from './MainheroImage'
 
-const HeroImage = ({ heroMossImage, alt, product }) => {
+export default function HeroImage({ heroMossImage, alt, product }) {
   const [bigMossImage, setBigMossImage] = useState(heroMossImage)
   return (
     <>
@@ -23,20 +24,7 @@ const HeroImage = ({ heroMossImage, alt, product }) => {
             </div>
           ))}
         </div>
-        <div className="lg:w-4/5 mx-auto">
-          <Image
-            src={bigMossImage}
-            alt={alt}
-            width={800}
-            height={800}
-            priority
-            className="object-contain"
-            style={{
-              width: '100%',
-              height: 'auto',
-            }}
-          />
-        </div>
+        <MainheroImage bigMossImage={bigMossImage} />
       </div>
       <div className="flex max-w-[400px] mx-auto justify-center lg:hidden mb-8">
         {product.image.map((moss, index) => (
@@ -54,5 +42,3 @@ const HeroImage = ({ heroMossImage, alt, product }) => {
     </>
   )
 }
-
-export default HeroImage

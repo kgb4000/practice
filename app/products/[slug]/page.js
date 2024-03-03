@@ -92,7 +92,9 @@ export default async function Product({ params }) {
 
   const data = product.categories
 
-  const src = buildImage(product.image[0].public_id).toURL()
+  const src = buildImage(product.image[0].public_id)
+    .resize(limitFill().width(800).height(800))
+    .toURL()
 
   const buffer = await fetch(src).then(async (res) => {
     return Buffer.from(await res.arrayBuffer())
@@ -109,9 +111,11 @@ export default async function Product({ params }) {
             <HeroImage
               product={product}
               heroMossImage={buildImage(product.image[0].public_id)
-                .resize(limitFill().width(800).height(800))
+                .resize(limitFill().width(828).height(786))
                 .toURL()}
               alt={product.name}
+              // placeholder="blur"
+              // blurDataURL={base64}
             />
             <div className="lg:w-2/5 px-4 xl:px-0">
               {/* <Stars product={product} /> */}
@@ -136,7 +140,7 @@ export default async function Product({ params }) {
             {data[0].products.map((product) => (
               <div key={product.id}>
                 <div className="text-center mx-auto">
-                  <a href={`/products/${product.slug}`}>
+                  <Link href={`/products/${product.slug}`}>
                     <Image
                       src={buildImage(product.image[0].public_id)
                         .resize(limitFill().width(400).height(400))
@@ -156,7 +160,7 @@ export default async function Product({ params }) {
                       {product.name}
                     </p>
                     <p className="my-5 font-semibold">${product.price}</p>
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
