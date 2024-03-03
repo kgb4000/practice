@@ -4,7 +4,6 @@ import React from 'react'
 import { useState } from 'react'
 import Image from 'next/image'
 import MossCard from '@/components/MossCard'
-import { buildImage } from '@/lib/cloudinary/cloudinary'
 
 const HeroImage = ({ heroMossImage, alt, product }) => {
   const [bigMossImage, setBigMossImage] = useState(heroMossImage)

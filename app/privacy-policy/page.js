@@ -5,6 +5,12 @@ export const metadata = {
   title: 'Privacy Policy | Sea Moss Wellness',
   description:
     'This policy provides detailed insights into how we handle your information when you visit our website at seamosswellness.com.',
+  robots: {
+    index: false,
+  },
+  googleBot: {
+    index: false,
+  },
   alternates: {
     canonical: 'https://seamosswellness.com/privacy-policy',
   },

@@ -9,6 +9,7 @@ import AboutUs from '@/components/AboutUs'
 import CallToAction from '@/components/CallToAction'
 import Hero from '@/components/Hero'
 import OurCompany from '@/components/OurCompany'
+import HeroImage from '@/public/images/ocean-bg.jpeg'
 
 export const metadata = {
   title: 'Buy Premium Sea Moss Products Online | Sea Moss Wellness',
@@ -23,7 +24,7 @@ export default function Home() {
   return (
     <>
       <Hero
-        backgroundImage="/images/ocean-bg.jpeg"
+        backgroundImage={HeroImage}
         backgroundHeight="h-[100vh]"
         alt="Ocean background."
         padding="py-[16.5rem]"

@@ -18,6 +18,7 @@ const AboutUs = () => {
                 width: '100%',
                 height: 'auto',
               }}
+              placeholder="blur"
             />
             <div>
               <div className="mt-10">

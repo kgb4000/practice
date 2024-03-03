@@ -9,6 +9,7 @@ import Natural from '@/components/Natural'
 import Stars from '@/components/Stars'
 import CustomerReviewsApp from '@/components/CustomerReviewsApp'
 import { limitFill } from '@cloudinary/url-gen/actions/resize'
+import { getPlaiceholder } from 'plaiceholder'
 
 export async function getProductSlug(slug) {
   const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT, {
@@ -91,6 +92,14 @@ export default async function Product({ params }) {
 
   const data = product.categories
 
+  const src = buildImage(product.image[0].public_id).toURL()
+
+  const buffer = await fetch(src).then(async (res) => {
+    return Buffer.from(await res.arrayBuffer())
+  })
+
+  const { base64 } = await getPlaiceholder(buffer)
+
   return (
     <>
       <script type="application/ld+json"></script>
@@ -99,11 +108,13 @@ export default async function Product({ params }) {
           <div className="lg:flex">
             <HeroImage
               product={product}
-              heroMossImage={buildImage(product.image[0].public_id).toURL()}
+              heroMossImage={buildImage(product.image[0].public_id)
+                .resize(limitFill().width(800).height(800))
+                .toURL()}
               alt={product.name}
             />
             <div className="lg:w-2/5 px-4 xl:px-0">
-              <Stars product={product} />
+              {/* <Stars product={product} /> */}
               <h1 className="text-5xl py-2 mt-4">{product.name}</h1>
               <p className="text-xl my-2 text-green-600">
                 PLANT-BASED | VEGAN | RAW FOOD | NON-GMO
@@ -138,7 +149,8 @@ export default async function Product({ params }) {
                         width: '80%',
                         height: 'auto',
                       }}
-                      priority
+                      placeholder="blur"
+                      blurDataURL={base64}
                     />
                     <p className="text-xl mb-5 max-w-[250px] mx-auto">
                       {product.name}

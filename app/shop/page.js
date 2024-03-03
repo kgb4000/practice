@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { GraphQLClient, gql } from 'graphql-request'
 import { buildImage } from '@/lib/cloudinary/cloudinary'
 import CallToAction from '@/components/CallToAction'
+import { getPlaiceholder } from 'plaiceholder'
 import { limitFill } from '@cloudinary/url-gen/actions/resize'
 
 const hygraph = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT)
@@ -32,6 +33,16 @@ export const metadata = {
 export default async function Shop() {
   const { products } = await hygraph.request(Products)
   console.log('products', products)
+
+  const src = buildImage(products[0].image[0].public_id)
+    .resize(limitFill().width(200).height(200))
+    .toURL()
+
+  const buffer = await fetch(src).then(async (res) => {
+    return Buffer.from(await res.arrayBuffer())
+  })
+
+  const { base64 } = await getPlaiceholder(buffer)
 
   return (
     <>
@@ -64,6 +75,8 @@ export default async function Shop() {
                         height: 'auto',
                       }}
                       priority
+                      placeholder="blur"
+                      blurDataURL={base64}
                     />
                     <div
                       className="yotpo bottomLine"

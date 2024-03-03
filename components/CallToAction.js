@@ -18,6 +18,7 @@ const CallToAction = () => {
                 width: '100%',
                 height: 'auto',
               }}
+              placeholder="blur"
             />
             <div className="pt-10">
               <h2 className="text-5xl lg:text-7xl text-center lg:text-left max-w-5xl mx-auto mb-10">
