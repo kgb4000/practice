@@ -133,7 +133,7 @@ const FAQ = () => {
               <h2 className="text-2xl lg:text-3xl leading-10 mb-5">
                 What is your refund policy
               </h2>
-              <p>
+              <p className="text-xl mb-4 leading-loose">
                 We stand behind the quality of our products. If you are not
                 satisfied with your purchase for any reason, please contact our
                 customer support team within 90 days of receiving your order for

@@ -48,7 +48,7 @@ export const metadata = {
   description:
     'Discover the full range of our natural sea moss products. From gels to capsules and dried moss, find everything for your wellness journey here.',
   alternates: {
-    canonical: 'https://seamosswellness.com/shop',
+    canonical: 'https://seamosswellness.com/track-order',
   },
 }
 
@@ -88,7 +88,7 @@ const TrackOrder = () => {
                 className="mx-auto"
               />
             </a>
-            <a href="/products/pinapple-sea-moss-gel-16oz">
+            <a href="/products/pineapple-sea-moss-gel-16oz">
               <Image
                 src="https://res.cloudinary.com/browne-company/image/upload/v1708120768/pineappleSeaMossGelAssets/SMW-SMG16oz-PINEAPPLE-V1_p77dzz.png"
                 alt="Pineapple Sea Moss Gel."
