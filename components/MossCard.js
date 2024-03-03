@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { buildImage } from '@/lib/cloudinary/cloudinary'
+import { crop, thumbnail } from '@cloudinary/url-gen/actions/resize'
 
 const MossCard = ({ changeBigMossImage, bigMossImage, product, index }) => {
   const handleClick = () => {

@@ -43,9 +43,11 @@ const Nav = () => {
                     Gels
                   </Link>
                 </li>
-                <button className="snipcart-checkout">
-                  <span className="snipcart-items-count p-2"></span>
-                </button>
+                <li className="mr-3">
+                  <button className="snipcart-checkout">
+                    <span className="snipcart-items-count p-2"></span>
+                  </button>
+                </li>
               </ul>
             </div>
           </div>
