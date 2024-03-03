@@ -1,8 +1,6 @@
 import React from 'react'
 import CallToAction from '@/components/CallToAction'
 import Image from 'next/image'
-import Link from 'next/link'
-import RefreshLink from '@/components/RefreshLink'
 
 async function getCategorySlug(slug) {
   const res = await fetch(
