@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <>
       <header>
-        <p className="fixed w-full z-20 text-center bg-orange-600 py-4 text-white top-0 h-[80px] font-semibold">
+        <p className="fixed w-full z-20 text-center bg-green-600 py-4 text-white top-0 h-[80px] font-semibold">
           🌟Free shipping on orders over $100🌟
         </p>
         <nav className="bg-gray-50 p-4 mt-2 fixed w-full z-20 top-12">

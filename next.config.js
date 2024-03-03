@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {}
 
-// export const images = {
+// const images = {
 //   domains: ['images.unsplash.com', 'res.cloudinary.com'],
 // }
 
@@ -10,3 +10,16 @@ module.exports = {
     domains: ['images.unsplash.com', 'res.cloudinary.com'],
   },
 }
+
+// module.exports = {
+//   images: {
+//     remotePatterns: [
+//       {
+//         protocol: 'https',
+//         hostname: 'res.cloudinary.com',
+//         port: '',
+//         pathname: '/account123/**',
+//       },
+//     ],
+//   },
+// }
