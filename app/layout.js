@@ -64,7 +64,7 @@ export default function RootLayout({ children }) {
           })();
         `,
           }}
-          strategy="beforeInteractive"
+          strategy="lazyOnload"
         />
       </body>
       <GoogleTagManager gtmId="GTM-WZS4FBXG" />
