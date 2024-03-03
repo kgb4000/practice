@@ -5,6 +5,12 @@ export const metadata = {
   title: 'Refund Policy | Sea Moss Wellness',
   description:
     'Want to learn more about sea moss, or want to send us a message? Contact us today!',
+  robots: {
+    index: false,
+  },
+  googleBot: {
+    index: false,
+  },
   alternates: {
     canonical: 'https://seamosswellness.com/privacy-policy',
   },

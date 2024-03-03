@@ -1,7 +1,22 @@
 import React from 'react'
 import Link from 'next/link'
 
-const About = () => {
+export const metadata = {
+  title: 'Disclaimer | Sea Moss Wellness',
+  description:
+    'The content on this website, including texts, graphics, images, and other material types, is provided exclusively for informational and educational purposes.',
+  robots: {
+    index: false,
+  },
+  googleBot: {
+    index: false,
+  },
+  alternates: {
+    canonical: 'https://seamosswellness.com/privacy-policy',
+  },
+}
+
+const Disclaimer = () => {
   return (
     <>
       <section>
@@ -68,4 +83,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Disclaimer

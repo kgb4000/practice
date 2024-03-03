@@ -1,14 +1,14 @@
 export const metadata = {
   title: 'Terms of Service | Sea Moss Wellness',
   description: 'This is the terms of services agreement for Sea Moss Wellness.',
-  alterantes: {
-    canonical: 'https://seamosswellness.com/terms-of-service',
-  },
   robots: {
     index: false,
   },
   googleBot: {
     index: false,
+  },
+  alterantes: {
+    canonical: 'https://seamosswellness.com/terms-of-service',
   },
 }
 

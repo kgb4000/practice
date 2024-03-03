@@ -47,6 +47,12 @@ export const metadata = {
   title: 'Track My order | Sea Moss Wellness',
   description:
     'Discover the full range of our natural sea moss products. From gels to capsules and dried moss, find everything for your wellness journey here.',
+  robots: {
+    index: false,
+  },
+  googleBot: {
+    index: false,
+  },
   alternates: {
     canonical: 'https://seamosswellness.com/track-order',
   },
