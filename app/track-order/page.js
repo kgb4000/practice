@@ -86,6 +86,7 @@ const TrackOrder = () => {
                 width={400}
                 height={400}
                 className="mx-auto"
+                sizes="(max-width: 400px) 100vw, 400px"
               />
             </a>
             <a href="/products/pineapple-sea-moss-gel-16oz">
