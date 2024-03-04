@@ -6,7 +6,7 @@ import Image from 'next/image'
 import MossCard from '@/components/MossCard'
 import MainheroImage from './MainheroImage'
 
-export default function HeroImage({ heroMossImage, alt, product }) {
+export default function HeroImage({ heroMossImage, product }) {
   const [bigMossImage, setBigMossImage] = useState(heroMossImage)
   return (
     <>
@@ -24,7 +24,7 @@ export default function HeroImage({ heroMossImage, alt, product }) {
             </div>
           ))}
         </div>
-        <MainheroImage bigMossImage={bigMossImage} />
+        <MainheroImage bigMossImage={bigMossImage} alt={product.name} />
       </div>
       <div className="flex max-w-[400px] mx-auto justify-center lg:hidden mb-8">
         {product.image.map((moss, index) => (

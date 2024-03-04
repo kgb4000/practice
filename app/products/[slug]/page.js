@@ -8,7 +8,7 @@ import Price from '@/components/Price'
 import Natural from '@/components/Natural'
 import Stars from '@/components/Stars'
 import CustomerReviewsApp from '@/components/CustomerReviewsApp'
-import { limitFill } from '@cloudinary/url-gen/actions/resize'
+import { limitFit } from '@cloudinary/url-gen/actions/resize'
 import { getPlaiceholder } from 'plaiceholder'
 
 export async function getProductSlug(slug) {
@@ -93,7 +93,7 @@ export default async function Product({ params }) {
   const data = product.categories
 
   const src = buildImage(product.image[0].public_id)
-    .resize(limitFill().width(800).height(800))
+    .resize(limitFit().width(800).height(800))
     .toURL()
 
   const buffer = await fetch(src).then(async (res) => {
@@ -111,7 +111,7 @@ export default async function Product({ params }) {
             <HeroImage
               product={product}
               heroMossImage={buildImage(product.image[0].public_id)
-                .resize(limitFill().width(828).height(786))
+                // .resize(limitFill().width(828).height(786))
                 .toURL()}
               alt={product.name}
               // placeholder="blur"
@@ -140,17 +140,17 @@ export default async function Product({ params }) {
             {data[0].products.map((product) => (
               <div key={product.id}>
                 <div className="text-center mx-auto">
-                  <Link href={`/products/${product.slug}`}>
+                  <a href={`/products/${product.slug}`}>
                     <Image
                       src={buildImage(product.image[0].public_id)
-                        .resize(limitFill().width(400).height(400))
+                        .resize(limitFit().width(400).height(400))
                         .toURL()}
                       alt={product.name}
                       className="mx-auto"
                       width={400}
                       height={400}
                       style={{
-                        width: '80%',
+                        maxWidth: '80%',
                         height: 'auto',
                       }}
                       placeholder="blur"
@@ -160,7 +160,7 @@ export default async function Product({ params }) {
                       {product.name}
                     </p>
                     <p className="my-5 font-semibold">${product.price}</p>
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}

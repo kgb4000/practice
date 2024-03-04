@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { buildImage } from '@/lib/cloudinary/cloudinary'
 import { crop, thumbnail } from '@cloudinary/url-gen/actions/resize'
-import { limitFit } from '@cloudinary/url-gen/actions/resize'
+import { placeholder } from '@cloudinary/react'
 
 const MossCard = ({ changeBigMossImage, bigMossImage, product, index }) => {
   const handleClick = () => {
@@ -22,15 +22,16 @@ const MossCard = ({ changeBigMossImage, bigMossImage, product, index }) => {
       <div className="flex justify-center">
         <Image
           src={buildImage(product.image[index].public_id)
-            .resize(limitFit().width(200).height(200))
+            .resize(thumbnail().width(150).height(150))
             .toURL()}
           alt={product.name}
           width={200}
           height={200}
           style={{
-            width: '60%',
+            maxWidth: '60%',
             heigth: 'auto',
           }}
+          plugins={[placeholder()]}
         />
       </div>
     </div>

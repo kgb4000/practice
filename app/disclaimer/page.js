@@ -20,7 +20,7 @@ const Disclaimer = () => {
   return (
     <>
       <section>
-        <div className="container mx-auto max-w-3xl mt-40 mb-28">
+        <div className="container max-w-3xl mx-auto my-40 px-6">
           <h1 className="text-center text-5xl lg:text-7xl py-10">
             Medical Disclaimer
           </h1>

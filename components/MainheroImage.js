@@ -1,7 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
+import { placeholder } from '@cloudinary/react'
 
-const MainheroImage = ({ bigMossImage, alt }) => {
+export default function MainheroImage({ bigMossImage, alt }) {
   return (
     <>
       <div className="lg:w-4/5 mx-auto">
@@ -13,13 +14,12 @@ const MainheroImage = ({ bigMossImage, alt }) => {
           priority
           className="object-contain"
           style={{
-            width: '100%',
+            maxWidth: '100%',
             height: 'auto',
           }}
+          plugins={[placeholder()]}
         />
       </div>
     </>
   )
 }
-
-export default MainheroImage

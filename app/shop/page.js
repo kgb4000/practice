@@ -4,7 +4,7 @@ import { GraphQLClient, gql } from 'graphql-request'
 import { buildImage } from '@/lib/cloudinary/cloudinary'
 import CallToAction from '@/components/CallToAction'
 import { getPlaiceholder } from 'plaiceholder'
-import { limitFill } from '@cloudinary/url-gen/actions/resize'
+import { limitFit } from '@cloudinary/url-gen/actions/resize'
 
 const hygraph = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT)
 
@@ -35,7 +35,7 @@ export default async function Shop() {
   console.log('products', products)
 
   const src = buildImage(products[0].image[0].public_id)
-    .resize(limitFill().width(200).height(200))
+    .resize(limitFit().width(200).height(200))
     .toURL()
 
   const buffer = await fetch(src).then(async (res) => {
@@ -65,7 +65,9 @@ export default async function Shop() {
                 <div className="mx-auto text-center hover:bg-slate-100 pt-10 pb-10 rounded-2xl">
                   <a href={`/products/${product.slug}`}>
                     <Image
-                      src={buildImage(product.image[0].public_id).toURL()}
+                      src={buildImage(product.image[0].public_id)
+                        .resize(limitFit().width(1000).height(1000))
+                        .toURL()}
                       alt={product.name}
                       className="mx-auto"
                       width={400}

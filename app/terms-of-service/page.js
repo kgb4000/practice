@@ -16,7 +16,7 @@ const TermsOfService = () => {
   return (
     <>
       <section>
-        <div className="container max-w-3xl mx-auto my-40">
+        <div className="container max-w-3xl mx-auto my-40 px-6">
           <h1 className="text-5xl my-8 text-center">Terms of Service</h1>
           <p className="text-2xl mb-4">Welcome to Sea Moss Wellness.</p>
           <p className="text-xl mb-4">
