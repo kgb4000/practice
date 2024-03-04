@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 import { placeholder } from '@cloudinary/react'
 
 export default function MainheroImage({ bigMossImage, alt }) {
@@ -12,7 +13,7 @@ export default function MainheroImage({ bigMossImage, alt }) {
           width={828}
           height={786}
           priority
-          className="object-contain"
+          // className="object-contain"
           style={{
             maxWidth: '100%',
             height: 'auto',

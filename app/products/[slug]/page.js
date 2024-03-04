@@ -111,7 +111,7 @@ export default async function Product({ params }) {
             <HeroImage
               product={product}
               heroMossImage={buildImage(product.image[0].public_id)
-                // .resize(limitFill().width(828).height(786))
+                // .resize(limitFit().width(828).height(786))
                 .toURL()}
               alt={product.name}
               // placeholder="blur"

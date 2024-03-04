@@ -8,8 +8,25 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import * as fbq from '../lib/fpixel'
 const inter = Inter({ subsets: ['latin'] })
+import { useEffect, useState } from 'react'
 
 export default function RootLayout({ children }) {
+  const [isClient, setIsClient] = useState(false)
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.type = 'text/javascript'
+    script.async = true
+    script.src =
+      '//staticw2.yotpo.com/EaMynCkV7J2dZy7SrhJdg1qSJpOAUgm2yIYNzFKo/widget.js'
+    const existingScript = document.getElementsByTagName('script')[0]
+    existingScript.parentNode.insertBefore(script, existingScript)
+
+    return () => {
+      // Cleanup function to remove the script when component unmounts
+      script.remove()
+    }
+  }, [])
+
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -51,7 +68,7 @@ export default function RootLayout({ children }) {
           }}
           strategy="lazyOnload"
         />
-        <Script
+        {/* <Script
           dangerouslySetInnerHTML={{
             __html: `
           (function e(){
@@ -65,7 +82,7 @@ export default function RootLayout({ children }) {
         `,
           }}
           strategy="lazyOnload"
-        />
+        /> */}
       </body>
       <GoogleTagManager gtmId="GTM-WZS4FBXG" />
     </html>

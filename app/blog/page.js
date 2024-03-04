@@ -37,18 +37,18 @@ export default async function Blog() {
   return (
     <>
       <section>
-        <div className="container max-w-7xl mx-auto px-8 py-32">
+        <div className="container max-w-7xl mx-auto px-8 py-40">
           <div className="text-center">
-            <h1 className="text-7xl mb-8">Wellness Blog</h1>
+            <h1 className="text-5xl mb-8">Wellness Blog</h1>
             <p className="text-xl mb-8">
               Read my posts about sea moss and learn about it's health benefits.
             </p>
           </div>
-          <div className="">
+          <div className="mx-auto">
             {posts.map((post) => (
               <div key={post.slug}>
-                <Link href={`/${post.slug}`} passHref>
-                  <div className="max-w-4xl mx-auto mb-10 flex items-center">
+                <Link href={`/${post.slug}`}>
+                  <div className="max-w-3xl mx-auto flex flex-col lg:flex-row items-center mb-14">
                     <Image
                       src={buildImage(post.coverImage.public_id).toURL()}
                       alt={post.coverImage.atlText}
@@ -56,10 +56,16 @@ export default async function Blog() {
                       title={post.title}
                       width={400}
                       height={300}
-                      className=" mb-5 mr-10"
+                      style={{
+                        width: '100%',
+                        height: 'auto',
+                      }}
+                      className="mb-4 lg: mr-8"
                     />
-                    <div className="blog-info">
-                      <h2 className="text-3xl mb-5 leading-10">{post.title}</h2>
+                    <div className="blog-info max-w-3xl">
+                      <h2 className="text-2xl mb-5 max-w-2xl lg:text-3xl leading-10">
+                        {post.title}
+                      </h2>
                       <p>Read more</p>
                     </div>
                   </div>

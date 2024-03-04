@@ -2,7 +2,6 @@
 
 import React from 'react'
 import { useState } from 'react'
-import Image from 'next/image'
 import MossCard from '@/components/MossCard'
 import MainheroImage from './MainheroImage'
 
@@ -17,6 +16,7 @@ export default function HeroImage({ heroMossImage, product }) {
               <MossCard
                 product={product}
                 index={index}
+                alt={product.name}
                 imgURL={moss}
                 changeBigMossImage={(moss) => setBigMossImage(moss)}
                 bigMossImage={bigMossImage}
@@ -32,6 +32,7 @@ export default function HeroImage({ heroMossImage, product }) {
             <MossCard
               product={product}
               index={index}
+              alt={product.name}
               imgURL={moss}
               changeBigMossImage={(moss) => setBigMossImage(moss)}
               bigMossImage={bigMossImage}

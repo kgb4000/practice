@@ -5,6 +5,7 @@ import { buildImage } from '@/lib/cloudinary/cloudinary'
 import CallToAction from '@/components/CallToAction'
 import { getPlaiceholder } from 'plaiceholder'
 import { limitFit } from '@cloudinary/url-gen/actions/resize'
+import { CldImage } from 'next-cloudinary'
 
 const hygraph = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT)
 
@@ -66,12 +67,12 @@ export default async function Shop() {
                   <a href={`/products/${product.slug}`}>
                     <Image
                       src={buildImage(product.image[0].public_id)
-                        .resize(limitFit().width(1000).height(1000))
+                        .resize(limitFit().width(600).height(600))
                         .toURL()}
                       alt={product.name}
                       className="mx-auto"
                       width={400}
-                      height={400}
+                      height={380}
                       style={{
                         width: '80%',
                         height: 'auto',
@@ -79,6 +80,7 @@ export default async function Shop() {
                       priority
                       placeholder="blur"
                       blurDataURL={base64}
+                      sizes="(min-width: 480px) 50vw, (min-width: 728px) 33vw, (min-width: 976px) 25vw, 100vw "
                     />
                     <div
                       className="yotpo bottomLine"
