@@ -110,7 +110,7 @@ export default async function Category({ params }) {
                         height: 'auto',
                       }}
                       // sizes="(min-width: 480px) 50vw, (min-width: 728px) 33vw, (min-width: 976px) 25vw, 100vw "
-                      plugins={[responsive(), placeholder()]}
+                      // plugins={[responsive(), placeholder()]}
                     />
                   </a>
                   <div

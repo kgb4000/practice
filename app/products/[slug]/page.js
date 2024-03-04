@@ -55,10 +55,6 @@ export async function getProductSlug(slug) {
                 price
                 image
                 slug
-                faq {
-                  question
-                  answer
-                }
               }
             }
           }
@@ -111,7 +107,7 @@ export default async function Product({ params }) {
             <HeroImage
               product={product}
               heroMossImage={buildImage(product.image[0].public_id)
-                // .resize(limitFit().width(828).height(786))
+                .resize(limitFit().width(800).height(800))
                 .toURL()}
               alt={product.name}
               // placeholder="blur"

@@ -16,6 +16,7 @@ const BlogSection = () => {
                   src="https://res.cloudinary.com/browne-company/image/upload/v1704740656/seaMossWellnessBlogImages/sea_moss-prostate-health_mxfxzm.jpg"
                   width={700}
                   height={300}
+                  alt="Is Sea Moss Good for Prostate Cancer?"
                   style={{
                     width: '100%',
                     height: 'auto',
@@ -33,6 +34,7 @@ const BlogSection = () => {
                   src="https://res.cloudinary.com/browne-company/image/upload/v1704740522/seaMossWellnessBlogImages/does-sea-moss-lower-blood-pressure_omeawf.jpg"
                   width={700}
                   height={300}
+                  alt="Does Sea Moss Lower Blood Pressure?"
                   style={{
                     width: '100%',
                     height: 'auto',
@@ -50,6 +52,7 @@ const BlogSection = () => {
                   src="https://res.cloudinary.com/browne-company/image/upload/v1704984715/seaMossWellnessBlogImages/se-moss-for-arthritis_oq1jca.jpg"
                   width={700}
                   height={300}
+                  alt="Does Sea Moss Help With Arthritis and Joint Pain?"
                   style={{
                     width: '100%',
                     height: 'auto',

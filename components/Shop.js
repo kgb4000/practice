@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { GraphQLClient, gql } from 'graphql-request'
 import { buildImage } from '@/lib/cloudinary/cloudinary'
+import { limitFit } from '@cloudinary/url-gen/actions/resize'
+import { getPlaiceholder } from 'plaiceholder'
 
 const hygraph = new GraphQLClient(
   'https://api-us-east-1.hygraph.com/v2/clc75eeyc1srk01t6gd17elvj/master'
@@ -27,6 +29,16 @@ const FeaturedCategory = gql`
 export default async function Shop() {
   const { category } = await hygraph.request(FeaturedCategory)
   console.log(FeaturedCategory)
+
+  const src = buildImage(category.products[0].image[0].public_id)
+    .resize(limitFit().width(400).height(380))
+    .toURL()
+
+  const buffer = await fetch(src).then(async (res) => {
+    return Buffer.from(await res.arrayBuffer())
+  })
+
+  const { base64 } = await getPlaiceholder(buffer)
   return (
     <>
       <section>
@@ -45,15 +57,20 @@ export default async function Shop() {
                   <div key={product.id} className="mb-10">
                     <a href={`/products/${product.slug}`}>
                       <Image
-                        src={buildImage(product.image[0].public_id).toURL()}
+                        src={buildImage(product.image[0].public_id)
+                          .resize(limitFit().width(400).height(380))
+                          .toURL()}
                         alt={product.name}
-                        width={400}
-                        height={400}
                         className="mx-auto"
+                        width={400}
+                        height={380}
                         style={{
-                          width: '70%',
+                          width: '80%',
                           height: 'auto',
                         }}
+                        priority
+                        placeholder="blur"
+                        blurDataURL={base64}
                       />
                       <div
                         className="yotpo bottomLine"

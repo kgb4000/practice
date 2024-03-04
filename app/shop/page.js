@@ -5,7 +5,6 @@ import { buildImage } from '@/lib/cloudinary/cloudinary'
 import CallToAction from '@/components/CallToAction'
 import { getPlaiceholder } from 'plaiceholder'
 import { limitFit } from '@cloudinary/url-gen/actions/resize'
-import { CldImage } from 'next-cloudinary'
 
 const hygraph = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT)
 
@@ -36,7 +35,7 @@ export default async function Shop() {
   console.log('products', products)
 
   const src = buildImage(products[0].image[0].public_id)
-    .resize(limitFit().width(200).height(200))
+    .resize(limitFit().width(400).height(400))
     .toURL()
 
   const buffer = await fetch(src).then(async (res) => {
