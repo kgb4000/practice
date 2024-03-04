@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import { buildImage } from '@/lib/cloudinary/cloudinary'
 import { crop, thumbnail } from '@cloudinary/url-gen/actions/resize'
-import { placeholder } from '@cloudinary/react'
-import { CldImage } from 'next-cloudinary'
+import { placeholder, responsive } from '@cloudinary/react'
 
 const MossCard = ({ changeBigMossImage, bigMossImage, product, index }) => {
   const handleClick = () => {
@@ -32,7 +31,7 @@ const MossCard = ({ changeBigMossImage, bigMossImage, product, index }) => {
             maxWidth: '70%',
             heigth: 'auto',
           }}
-          // plugins={[placeholder()]}
+          plugins={[responsive(), placeholder()]}
         />
       </div>
     </div>

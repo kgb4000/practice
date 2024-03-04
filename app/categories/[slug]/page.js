@@ -8,6 +8,7 @@ import CallToAction from '@/components/CallToAction'
 import DriedSeaMoss from '@/components/DriedSeaMoss'
 import SeaMossGels from '@/components/SeaMossGels'
 import { limitFit } from '@cloudinary/url-gen/actions/resize'
+import { placeholder, responsive } from '@cloudinary/react'
 
 async function getCategorySlug(slug) {
   const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT, {
@@ -108,7 +109,8 @@ export default async function Category({ params }) {
                         width: '80%',
                         height: 'auto',
                       }}
-                      sizes="(min-width: 480px) 50vw, (min-width: 728px) 33vw, (min-width: 976px) 25vw, 100vw "
+                      // sizes="(min-width: 480px) 50vw, (min-width: 728px) 33vw, (min-width: 976px) 25vw, 100vw "
+                      plugins={[responsive(), placeholder()]}
                     />
                   </a>
                   <div

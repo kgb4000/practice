@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { CldImage } from 'next-cloudinary'
-import { placeholder } from '@cloudinary/react'
+import { placeholder, responsive } from '@cloudinary/react'
 
 export default function MainheroImage({ bigMossImage, alt }) {
   return (
@@ -18,7 +18,7 @@ export default function MainheroImage({ bigMossImage, alt }) {
             maxWidth: '100%',
             height: 'auto',
           }}
-          plugins={[placeholder()]}
+          plugins={[responsive(), placeholder()]}
         />
       </div>
     </>
