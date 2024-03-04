@@ -23,6 +23,7 @@ export async function getProductSlug(slug) {
             product(where: {slug: $slug}) {
             id
             name
+            seoTitle
             metaDescription
             productDescription
             price
@@ -72,7 +73,7 @@ export async function generateMetadata({ params }) {
   const product = await getProductSlug(params.slug)
 
   return {
-    title: product.name,
+    title: product.seoTitle,
     description: product.metaDescription,
     alternates: {
       canonical: `https://seamosswellness.com/products/${product.slug}`,
