@@ -50,8 +50,9 @@ export default async function Shop() {
         <div className="container max-w-9xl mx-auto mt-32 px-4">
           <h1 className="text-5xl text-center py-10">Our Sea Moss Products</h1>
           <div className="flex gap-x-[20px] py-4 justify-center items-center mb-4">
-            <Link href="/shop">All products</Link>
-            <p className="text-center"></p>
+            <p className="text-center">
+              <Link href="/shop">All products</Link>
+            </p>
             <p className="text-center">
               <Link href="/categories/dried-sea-moss">Dried Sea Moss</Link>
             </p>

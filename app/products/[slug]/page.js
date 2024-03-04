@@ -89,7 +89,7 @@ export default async function Product({ params }) {
   const data = product.categories
 
   const src = buildImage(product.image[0].public_id)
-    .resize(limitFit().width(800).height(800))
+    .resize(limitFit().width(800).height(760))
     .toURL()
 
   const buffer = await fetch(src).then(async (res) => {

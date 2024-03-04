@@ -50,7 +50,7 @@ export async function generateMetadata({ params }) {
     title: post.title,
     description: post.metaDescription,
     alternates: {
-      canonical: `https://seamosswellness.com/products/${post.slug}`,
+      canonical: `https://seamosswellness.com/${post.slug}`,
     },
   }
 }
