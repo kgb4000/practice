@@ -7,11 +7,11 @@ export default function MainheroImage({ bigMossImage, alt }) {
   return (
     <>
       <div className="lg:w-4/5 mx-auto">
-        <Image
+        <CldImage
           src={bigMossImage}
           alt={alt}
-          width={828}
-          height={786}
+          width={800}
+          height={760}
           priority
           // className="object-contain"
           style={{
