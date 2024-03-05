@@ -111,15 +111,12 @@ export default async function Product({ params }) {
                 .resize(limitFit().width(800).height(760))
                 .toURL()}
               alt={product.name}
-              className="w-[400px] md:w-[600px] lg:w-[800px]"
-              // placeholder="blur"
-              // blurDataURL={base64}
             />
             <div className="lg:w-2/5 px-4 xl:px-0">
               {/* <Stars product={product} /> */}
               <h1 className="text-5xl py-2 mt-4">{product.name}</h1>
-              <p className="text-xl my-2 text-green-600">
-                PLANT-BASED | VEGAN | RAW FOOD | NON-GMO
+              <p className="text-md my-2 text-green-600">
+                PLANT-BASED | VEGAN | SUPERFOOD | NON-GMO
               </p>
               <p className="text-xl my-4">{product.productDescription}</p>
               <Price product={product} priceOfOne={priceOfOne} />
@@ -131,7 +128,7 @@ export default async function Product({ params }) {
       {/* <MoreInfo product={product} /> */}
       <section>
         <div className="container max-w-7xl mx-auto my-20">
-          <h2 className="text-5xl text-center mb-20">
+          <h2 className="text-3xl lg:text-5xl text-center mb-20">
             More Products You May Like
           </h2>
           <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4">

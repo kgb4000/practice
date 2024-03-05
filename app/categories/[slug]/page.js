@@ -7,8 +7,7 @@ import { buildImage } from '@/lib/cloudinary/cloudinary'
 import CallToAction from '@/components/CallToAction'
 import DriedSeaMoss from '@/components/DriedSeaMoss'
 import SeaMossGels from '@/components/SeaMossGels'
-import { limitFit } from '@cloudinary/url-gen/actions/resize'
-import { placeholder, responsive } from '@cloudinary/react'
+import { limitFill } from '@cloudinary/url-gen/actions/resize'
 
 async function getCategorySlug(slug) {
   const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT, {
@@ -90,7 +89,7 @@ export default async function Category({ params }) {
           <div className="grid grid-cols-2 lg:grid-cols-3 my-4">
             {category.products.map((product) => {
               const imageUrl = buildImage(product.image[0].public_id)
-                .resize(limitFit().width(600).height(600))
+                .resize(limitFill().width(600).height(600))
                 .toURL()
               return (
                 <div

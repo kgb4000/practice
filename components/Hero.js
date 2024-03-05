@@ -22,7 +22,6 @@ const HeroSection = ({
             priority
             objectFit="cover"
             fill
-            placeholder="blur"
           />
           <div
             className={`max-w-7xl mx-auto flex flex-col justify-center items-center ${padding}`}

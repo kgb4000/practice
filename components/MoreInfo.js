@@ -7,7 +7,7 @@ const MoreInfo = ({ product }) => {
   return (
     <>
       <section className="bg-slate-50">
-        <div className="max-w-sm mx-auto px-4 py-24">
+        <div className="max-w-sm mx-auto px-8 py-16">
           <hr></hr>
           <Disclosure as="div" className="my-2">
             {({ open }) => (
@@ -59,10 +59,10 @@ const MoreInfo = ({ product }) => {
                   <RichText
                     content={product.benefits.raw}
                     renderers={{
-                      li: ({ children }) => (
-                        <li className="leading-relaxed font-normal lg:my-5 list-disc">
+                      p: ({ children }) => (
+                        <p className="leading-relaxed font-normal my-4 list-disc">
                           {children}
-                        </li>
+                        </p>
                       ),
                     }}
                   />
@@ -79,7 +79,14 @@ const MoreInfo = ({ product }) => {
                   <span className="text-2xl font-bold">+</span>
                 </Disclosure.Button>
                 <Disclosure.Panel>
-                  <RichText content={product.flavor.raw} />
+                  <RichText
+                    content={product.flavor.raw}
+                    renderers={{
+                      p: ({ children }) => (
+                        <p className="font-normal my-4">{children}</p>
+                      ),
+                    }}
+                  />
                 </Disclosure.Panel>
               </>
             )}
@@ -97,7 +104,7 @@ const MoreInfo = ({ product }) => {
                     content={product.shipping.raw}
                     renderers={{
                       p: ({ children }) => (
-                        <p className="font-normal lg:my-5">{children}</p>
+                        <p className="font-normal my-4">{children}</p>
                       ),
                     }}
                   />
@@ -120,7 +127,7 @@ const MoreInfo = ({ product }) => {
                     content={product.returnPolicy.raw}
                     renderers={{
                       p: ({ children }) => (
-                        <p className="font-normal lg:my-5">{children}</p>
+                        <p className="font-normal my-4">{children}</p>
                       ),
                     }}
                   />

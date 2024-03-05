@@ -86,7 +86,7 @@ const Price = ({ priceOfOne, product }) => {
           <p className="text-2xl text-green-600 font-bold my-1">
             You're saving: {discount}%
           </p>
-          <p className="text-2xl text-green-600 font-bold">
+          <p className="text-2xl text-green-600 font-bold text-right">
             ${(calculateDiscountedPrice() * quantity).toFixed(2)}{' '}
             <span className="line-through text-gray-900 text-xl">
               ${(price * quantity).toFixed(2)}

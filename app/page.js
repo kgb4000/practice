@@ -26,7 +26,7 @@ export default function Home() {
       <Hero
         backgroundImage={HeroImage}
         backgroundHeight="h-[100vh]"
-        alt="Ocean background."
+        alt="Sea Moss Wellness - Ocean background."
         padding="py-[16.5rem]"
         heroMarginBottom="mb-20 lg:mb-40"
         heroText="Organic Sea Moss"

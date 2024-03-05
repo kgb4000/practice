@@ -44,7 +44,8 @@ const Nav = () => {
                   </Link>
                 </li>
                 <li className="mr-3">
-                  <button className="snipcart-checkout">
+                  <button className="snipcart-checkout font-bold">
+                    Cart
                     <span className="snipcart-items-count p-2"></span>
                   </button>
                 </li>
