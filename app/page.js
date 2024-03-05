@@ -4,12 +4,12 @@ import Shop from '@/components/Shop'
 import Vitamins from '@/components/Vitamins'
 import BlogSection from '@/components/BlogSection'
 import Faq from '@/components/Faqs'
-import womanBg from '../public/images/black-woman-in-kitchen.jpeg'
+import womanBg from '../public/images/black-woman-in-kitchen.webp'
 import AboutUs from '@/components/AboutUs'
 import CallToAction from '@/components/CallToAction'
 import Hero from '@/components/Hero'
 import OurCompany from '@/components/OurCompany'
-import HeroImage from '@/public/images/ocean-bg.jpeg'
+import HeroImage from '@/public/images/ocean-bg.webp'
 
 export const metadata = {
   title: 'Buy Premium Sea Moss Products Online | Sea Moss Wellness',

@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import womanBg from '../public/images/black-woman-in-kitchen.jpeg'
-import kesBg from '../public/images/kes-founder.jpeg'
+import kesBg from '../public/images/kes-founder.webp'
 import Link from 'next/link'
 
 const AboutUs = () => {

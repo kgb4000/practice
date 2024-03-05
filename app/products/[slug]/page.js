@@ -111,6 +111,7 @@ export default async function Product({ params }) {
                 .resize(limitFit().width(800).height(760))
                 .toURL()}
               alt={product.name}
+              className="w-[400px] md:w-[600px] lg:w-[800px]"
               // placeholder="blur"
               // blurDataURL={base64}
             />

@@ -35,7 +35,7 @@ const DriedSeaMoss = () => {
         <div className="container max-w-9xl mx-auto mt-20 px-8">
           {/* <p className="text-center">{category.name}</p> */}
           <h2 className="text-5xl max-w-2xl mx-auto text-center my-10">
-            How To Make Sea Moss Gel With Dried Sea Moss
+            How To Use Dried Sea Moss To Make Sea Moss Gel
           </h2>
           <div className="xl:flex mb-14 gap-x-10">
             <div className="p-10 border rounded-xl mb-8">

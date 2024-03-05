@@ -61,7 +61,7 @@ export default async function Shop() {
                           .resize(limitFit().width(400).height(380))
                           .toURL()}
                         alt={product.name}
-                        className="mx-auto"
+                        className="mx-auto w-[400px]"
                         width={400}
                         height={380}
                         style={{
