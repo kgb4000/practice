@@ -26,6 +26,7 @@ const MossCard = ({ changeBigMossImage, bigMossImage, product, index }) => {
           alt={product.name}
           width={90}
           height={90}
+          priority
           style={{
             maxWidth: '70%',
             heigth: 'auto',
