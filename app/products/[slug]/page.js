@@ -8,7 +8,7 @@ import Price from '@/components/Price'
 import Natural from '@/components/Natural'
 import Stars from '@/components/Stars'
 import CustomerReviewsApp from '@/components/CustomerReviewsApp'
-import { limitFit } from '@cloudinary/url-gen/actions/resize'
+import { limitFit, fit } from '@cloudinary/url-gen/actions/resize'
 import { getPlaiceholder } from 'plaiceholder'
 
 export async function getProductSlug(slug) {
@@ -50,7 +50,7 @@ export async function getProductSlug(slug) {
               answer
             }
             categories {
-              products(where: { slug_not: "featured" }, first: 4){
+              products(where: { slug_not: "featured" }, last: 4){
                 id
                 name
                 price

@@ -8,6 +8,7 @@ import CallToAction from '@/components/CallToAction'
 import DriedSeaMoss from '@/components/DriedSeaMoss'
 import SeaMossGels from '@/components/SeaMossGels'
 import { limitFill } from '@cloudinary/url-gen/actions/resize'
+import { getPlaiceholder } from 'plaiceholder'
 
 async function getCategorySlug(slug) {
   const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT, {
@@ -28,7 +29,7 @@ async function getCategorySlug(slug) {
               question
               answer
             }
-            products(orderBy: createdAt_DESC, last: 40){
+            products(last: 40){
               id
               image 
               name
@@ -71,14 +72,25 @@ export default async function Category({ params }) {
   } else if (category.slug === 'sea-moss-gels') {
     content = <SeaMossGels />
   }
+
+  const src = buildImage(category.products[0].image[0].public_id)
+    .resize(limitFill().width(600).height(600))
+    .toURL()
+
+  const buffer = await fetch(src).then(async (res) => {
+    return Buffer.from(await res.arrayBuffer())
+  })
+
+  const { base64 } = await getPlaiceholder(buffer)
   return (
     <>
       <section>
         <div className="container max-w-9xl mx-auto mt-32 px-4">
           <h1 className="text-5xl text-center py-10"> Buy {category.name}</h1>
           <div className="flex gap-x-[20px] py-4 justify-center items-center mb-4">
-            <Link href="/shop">All products</Link>
-            <p className="text-center"></p>
+            <p className="text-center">
+              <Link href="/shop">All products</Link>
+            </p>
             <p className="text-center">
               <Link href="/categories/dried-sea-moss">Dried Sea Moss</Link>
             </p>
@@ -86,37 +98,29 @@ export default async function Category({ params }) {
               <Link href="/categories/sea-moss-gels">Sea Moss Gels</Link>
             </p>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-3 my-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 my-4">
             {category.products.map((product) => {
-              const imageUrl = buildImage(product.image[0].public_id)
-                .resize(limitFill().width(600).height(600))
-                .toURL()
               return (
-                <div
-                  key={product.id}
-                  className="mx-auto text-center hover:bg-slate-100 pt-10 pb-10 rounded-2xl"
-                >
+                <div className="mx-auto text-center hover:bg-slate-100 pt-10 pb-10 rounded-2xl">
                   <a href={`/products/${product.slug}`}>
                     <Image
-                      src={imageUrl}
+                      src={buildImage(product.image[0].public_id)
+                        .resize(limitFill().width(600).height(600))
+                        .toURL()}
                       priority
                       alt={product.name}
                       width={400}
-                      height={400}
+                      height={380}
                       className="mx-auto"
-                      style={{
-                        width: '80%',
-                        height: 'auto',
-                      }}
-                      // sizes="(min-width: 480px) 50vw, (min-width: 728px) 33vw, (min-width: 976px) 25vw, 100vw "
-                      // plugins={[responsive(), placeholder()]}
+                      placeholder="blur"
+                      blurDataURL={base64}
                     />
                   </a>
                   <div
                     className="yotpo bottomLine"
                     data-yotpo-product-id={product.id}
                   ></div>
-                  <p className="text-md mb-5 max-w-[100px] md:max-w-[250px] md:text-xl mx-auto font-semibold">
+                  <p className="text-xl mb-5 max-w-[300px] mx-auto font-semibold">
                     {product.name}
                   </p>
                   <p className="my-5 font-semibold">${product.price}</p>
