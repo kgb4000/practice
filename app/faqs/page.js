@@ -14,11 +14,11 @@ const FAQ = () => {
   return (
     <>
       <section>
-        <div className="conatainer max-w-3xl mx-auto py-44 px-8">
+        <div className="conatainer max-w-3xl mx-auto pt-44 pb-20 px-8">
           <h1 className="text-5xl text-center">
             Sea Moss Frequently Asked Questions
           </h1>
-          <div className="my-20">
+          <div className="my-14">
             <div className="my-8">
               <h2 className="text-2xl lg:text-3xl leading-10 mb-5">
                 What is Sea Moss
@@ -27,8 +27,15 @@ const FAQ = () => {
                 Sea moss is a type of red algae found in the ocean. It is
                 revered for its high nutritional content, boasting a rich array
                 of vitamins, minerals, and antioxidants. Sea moss is commonly
-                consumed in gel form or added to smoothies, soups, and other
-                dishes for its health benefits.
+                consumed in{' '}
+                <Link
+                  href="/categories/sea-moss-gels"
+                  className="text-red-500 underline"
+                >
+                  gel form
+                </Link>{' '}
+                or added to smoothies, soups, and other dishes for its health
+                benefits.
               </p>
             </div>
             <div className="my-8">
@@ -48,7 +55,7 @@ const FAQ = () => {
                 Sea moss is renowned for its numerous health benefits,
                 including:
               </p>
-              <ul className="ml-4">
+              <ul className="ml-8">
                 <li className="text-xl mb-4 leading-loose list-disc">
                   Rich source of essential minerals like iodine, calcium,
                   potassium, and magnesium.
@@ -90,11 +97,10 @@ const FAQ = () => {
                 What is the difference between Sea Moss and Irish Moss?
               </h2>
               <p className="text-xl mb-4 leading-loose">
-                Sea moss and Irish moss refer to the same species, Chondrus
-                crispus. The term "Irish moss" is commonly used in Ireland and
-                parts of Europe, while "sea moss" is more prevalent in other
-                parts of the world. They both offer similar health benefits and
-                nutritional profiles.
+                There are many different types of sea moss. Irish moss
+                (Chrondrus Crispus), is just one type of sea moss. Other types
+                include Gracilaria, Eucheuma Cottonii, and Kappaphycus
+                alvarezii.
               </p>
             </div>
             <div className="my-8">
@@ -237,6 +243,32 @@ const FAQ = () => {
                 been dispatched.
               </p>
             </div>
+            <div className="my-8">
+              <h2 className="text-2xl lg:text-3xl leading-10 mb-5">
+                What are your hours of operation?
+              </h2>
+              <p className="text-xl mb-4 leading-loose">
+                Our hours of operation are:
+              </p>
+              <ul className="ml-8">
+                <li className="text-xl mb-4 leading-loose list-disc">
+                  Mondays - Fridays: 9:00am - 5:00pm [EST]
+                </li>
+                <li className="text-xl mb-4 leading-loose list-disc">
+                  Saturadys: 9:00am - 3:00pm [EST]
+                </li>
+                <li className="text-xl mb-4 leading-loose list-disc">
+                  Sundays: CLOSED
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="text-center my-5">
+            <Link href="/shop">
+              <button className="py-4 px-10  bg-yellow-400 text-xl font-bold uppercase">
+                Shop Our Products
+              </button>
+            </Link>
           </div>
         </div>
       </section>

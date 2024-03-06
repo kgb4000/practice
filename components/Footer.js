@@ -14,14 +14,14 @@ const Footer = () => {
             </Link>
             <div className="lg:max-w-2xl mt-5 pr-5">
               <p className="max-w-2xl mt-5 pr-5">
-                If you're looking buy dried sea moss, organic sea moss gels, or
-                sea moss capsules and supplements, look no further.
+                Looking to buy dried sea moss, organic sea moss gels, or sea
+                moss capsules and supplements? Look no further.
               </p>
               <p className="py-5">
-                Whether you're looking for an easy-to-use gel to incorporate
-                into your daily routine, the versatility of raw sea moss to
-                create your own products, or the simplicity of capsules for
-                on-the-go nutrition, we have you covered.
+                Whether you prefer the convenience of ready-to-use gel for your
+                daily routine, the flexibility of raw sea moss to craft your own
+                creations, or the ease of capsules for convenient on-the-go
+                nutrition, we've got you covered.
               </p>
             </div>
           </div>
@@ -42,19 +42,29 @@ const Footer = () => {
               </span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
-                  <Link href="/track-order">Track your Order</Link>
+                  <Link href="/track-order" className="hover:underline">
+                    Track your Order
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/faqs">Faqs</Link>
+                  <Link href="/faqs" className="hover:underline">
+                    Faqs
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/blog">Blog</Link>
+                  <Link href="/blog" className="hover:underline">
+                    Blog
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/disclaimer">Disclaimer</Link>
+                  <Link href="/disclaimer" className="hover:underline">
+                    Disclaimer
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/reviews">Reviews</Link>
+                  <Link href="/reviews" className="hover:underline">
+                    Reviews
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -64,16 +74,24 @@ const Footer = () => {
               </span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
-                  <Link href="/shipping">Shipping</Link>
+                  <Link href="/shipping" className="hover:underline">
+                    Shipping
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/refund-policy">Refund</Link>
+                  <Link href="/refund-policy" className="hover:underline">
+                    Refund
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/terms-of-service">Terms of Service</Link>
+                  <Link href="/terms-of-service" className="hover:underline">
+                    Terms of Service
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/privacy-policy">Privacy Policy</Link>
+                  <Link href="/privacy-policy" className="hover:underline">
+                    Privacy Policy
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -83,26 +101,38 @@ const Footer = () => {
               </span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
-                  <Link href="/">Home</Link>
+                  <Link href="/" className="hover:underline">
+                    Home
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/shop">Shop</Link>
+                  <Link href="/shop" className="hover:underline">
+                    Shop
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/categories/sea-moss-gels">Sea Moss Gels</Link>
+                  <Link
+                    href="/categories/sea-moss-gels"
+                    className="hover:underline"
+                  >
+                    Sea Moss Gels
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/categories/dried-sea-moss">Dried Sea Moss</Link>
+                  <Link
+                    href="/categories/dried-sea-moss"
+                    className="hover:underline"
+                  >
+                    Dried Sea Moss
+                  </Link>
                 </li>
                 {/* <li>
                   <Link href="/shop">Capsules</Link>
                 </li> */}
                 <li>
-                  <Link href="/about">About</Link>
-                </li>
-
-                <li>
-                  <Link href="/contact">Contact</Link>
+                  <Link href="/about" className="hover:underline">
+                    About
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -112,16 +142,22 @@ const Footer = () => {
               </span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
-                  <Link href="/blog">Contact us</Link>
+                  <Link href="/contact" className="hover:underline">
+                    Contact us
+                  </Link>
                 </li>
                 <li className="break-words">
-                  <Link href="/blog">support@seamosswellness.com</Link>
+                  <Link href="/contact" className="hover:underline">
+                    support@seamosswellness.com
+                  </Link>
                 </li>
                 <li>
                   <Link href="/blog">(240) 266-0588</Link>
                 </li>
                 <li>
-                  <Link href="/blog">Join the Community</Link>
+                  <Link href="/" className="hover:underline">
+                    Join the Community
+                  </Link>
                 </li>
               </ul>
             </div>

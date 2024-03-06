@@ -72,8 +72,8 @@ const Faq = () => {
                   The time it takes to notice the effects of sea moss can vary
                   significantly from person to person, depending on various
                   factors such as individual health, the specific benefits being
-                  sought, the form of sea moss being consumed, and the
-                  consistency of its use.
+                  sought, the form of sea moss being consumed, and how often you
+                  take it.
                 </p>
               </div>
               <div>
