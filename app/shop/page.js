@@ -69,8 +69,10 @@ export default async function Shop() {
   return (
     <>
       <section>
-        <div className="container max-w-9xl mx-auto mt-32 px-4">
-          <h1 className="text-5xl text-center py-10">Our Sea Moss Products</h1>
+        <div className="container max-w-9xl mx-auto mt-40 px-8">
+          <h1 className="text-4xl lg:text-5xl text-center py-10">
+            Our Sea Moss Products
+          </h1>
           <div className="flex gap-x-[20px] py-4 justify-center items-center mb-4">
             <p className="text-center">
               <Link href="/shop">All products</Link>

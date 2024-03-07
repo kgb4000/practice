@@ -61,7 +61,7 @@ export default async function Post({ params }) {
   return (
     <>
       <section>
-        <div className="container max-w-[700px] mx-auto lg:px-0 py-44 px-8">
+        <div className="container max-w-[700px] mx-auto lg:px-0 pt-44 pb-16 px-8">
           <div className="">
             <h1 className="text-2xl lg:text-4xl text-center mb-4 leading-relaxed">
               {post.title}
@@ -96,7 +96,7 @@ export default async function Post({ params }) {
               <span>- by {post.author.name}</span>
             </div>
           </div>
-          <p>Share This:</p>
+          <p className="text-center">Share This:</p>
           <ShareBtn shareLink={`https://seamosswellness.com/${post.slug}`} />
           <article>
             <RichText

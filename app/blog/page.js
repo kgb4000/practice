@@ -5,7 +5,7 @@ import { buildImage } from '@/lib/cloudinary/cloudinary'
 import Image from 'next/image'
 
 export const metadata = {
-  title: 'Sea Moss Wellness Blog | Change What You Put In Your Body!',
+  title: 'Blog | Change What You Put In Your Body!',
   description:
     'Learn how it can help change your life! Read this blog to learn about the benefits fo sea moss and what it can doy for you physically and mentally!',
 }
@@ -39,10 +39,10 @@ export default async function Blog() {
       <section>
         <div className="container max-w-7xl mx-auto px-8 py-44">
           <div className="text-center">
-            <h1 className="text-5xl mb-8">Wellness Blog</h1>
-            <p className="text-xl mb-8">
-              Read my posts about sea moss and learn about it's health benefits.
-            </p>
+            <h1 className="text-4xl lg:text-5xl mb-8">Blog</h1>
+            {/* <p className="text-xl mb-8">
+              Read my posts and learn about how health benefits.
+            </p> */}
           </div>
           <div className="mx-auto">
             {posts.map((post) => (

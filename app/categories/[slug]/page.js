@@ -70,7 +70,7 @@ export default async function Category({ params }) {
   if (category.slug === 'dried-sea-moss') {
     content = <DriedSeaMoss />
   } else if (category.slug === 'sea-moss-gels') {
-    content = <SeaMossGels />
+    content = ' '
   }
 
   const src = buildImage(category.products[0].image[0].public_id)
@@ -85,8 +85,10 @@ export default async function Category({ params }) {
   return (
     <>
       <section>
-        <div className="container max-w-9xl mx-auto mt-32 px-4">
-          <h1 className="text-5xl text-center py-10"> Buy {category.name}</h1>
+        <div className="container max-w-9xl mx-auto mt-40 px-4">
+          <h1 className="text-3xl lg:text-5xl text-center py-10">
+            Buy {category.name}
+          </h1>
           <div className="flex gap-x-[20px] py-4 justify-center items-center mb-4">
             <p className="text-center">
               <Link href="/shop">All products</Link>

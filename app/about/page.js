@@ -19,7 +19,7 @@ const AboutUs = () => {
     <>
       <section>
         <div className="container max-w-5xl mx-auto mt-48 lg:my-40 px-6">
-          <h1 className="text-7xl lg:text-7xl text-center my-14">Our Story</h1>
+          <h1 className="text-3xl lg:text-7xl text-center my-14">Our Story</h1>
           <p className="text-xl mb-4">
             In 2020, we founded Sea Moss Wellness with a simple goal: to create
             top-notch sea moss supplements that truly make a difference.

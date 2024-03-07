@@ -27,7 +27,7 @@ export default function Home() {
         backgroundImage={HeroImage}
         backgroundHeight="h-[100vh]"
         alt="Sea Moss Wellness - Ocean background."
-        padding="py-[14rem] lg:py-[23.5rem]"
+        padding="py-[14rem] sm:py-[10rem] lg:py-[23.5rem]"
         heroMarginBottom="mb-20 lg:mb-40"
         heroText="Organic Sea Moss"
         subText="Buy premium dreid sea moss, sea moss gels, and capsules"

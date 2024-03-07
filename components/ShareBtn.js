@@ -10,7 +10,7 @@ const ShareBtn = ({ shareLink }) => {
   return (
     <>
       <div className="px-8">
-        <div className="flex flex-row my-10 justify-center">
+        <div className="flex flex-row my-4 justify-center">
           <div className="mx-1 text-md border-2 border-blue-800 bg-blue-800 text-white">
             <FacebookShareButton url={shareLink}>
               <div className="w-[100px] h-[40px] text-center flex justify-center items-center self-center">

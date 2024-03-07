@@ -42,8 +42,8 @@ export default async function Shop() {
   return (
     <>
       <section>
-        <div className="lg:my-20 px-5">
-          <h2 className="text-5xl lg:text-5xl leading-relaxed text-ui-fg-base font-normal my-5 text-center">
+        <div className="lg:my-20 px-8">
+          <h2 className="text-4xl lg:text-5xl leading-relaxed my-5 text-center">
             Explore Our Products
           </h2>
           <p className="text-xl text-center max-w-2xl mx-auto mb-16">
@@ -86,7 +86,7 @@ export default async function Shop() {
               </div>
             </div>
           </div>
-          <div className="text-center my-20">
+          <div className="text-center my-10">
             <Link href="/shop">
               <button className="py-4 px-10  bg-yellow-400 text-xl font-bold uppercase">
                 View All Products

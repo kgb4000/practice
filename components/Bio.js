@@ -4,7 +4,7 @@ export default function Bio({ authorName, authorImg, authorBio }) {
   return (
     <>
       <div>
-        <div className="border-solid border-2 p-8 rounded-lg">
+        <div className="border-solid border-2 p-6 rounded-lg">
           <Image
             src={authorImg}
             alt={authorName}
@@ -14,7 +14,7 @@ export default function Bio({ authorName, authorImg, authorBio }) {
             height={100}
           />
           <div className="my-8">
-            <h3 className="text-3xl font-bold pb-5">About the author</h3>
+            <h3 className="text-2xl font-bold pb-5">About the author</h3>
             <p className="text-xl">{authorBio}</p>
           </div>
         </div>

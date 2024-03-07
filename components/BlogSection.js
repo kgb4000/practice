@@ -5,9 +5,11 @@ const BlogSection = () => {
   return (
     <>
       <section>
-        <div className="max-w-9xl mx-auto px-4 py-20">
+        <div className="max-w-9xl mx-auto px-8 py-20">
           <div className="mb-14">
-            <h2 className="text-5xl text-center">Learn More On Our Blog</h2>
+            <h2 className="text-4xl lg:text-5xl text-center">
+              Learn More On Our Blog
+            </h2>
           </div>
           <div className="max-w-7xl mx-auto lg:grid grid-cols-3 gap-x-10">
             <div className="mb-10">
