@@ -36,10 +36,10 @@ const MoreInfo = ({ product }) => {
                   <RichText
                     content={product.ingredients.raw}
                     renderers={{
-                      li: ({ children }) => (
-                        <li className="font-normal lg:my-5 list-disc ml-4">
+                      p: ({ children }) => (
+                        <p className="font-normal lg:my-5 list-disc ml-4">
                           {children}
-                        </li>
+                        </p>
                       ),
                     }}
                   />
