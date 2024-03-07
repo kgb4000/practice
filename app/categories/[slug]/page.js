@@ -135,18 +135,14 @@ export default async function Category({ params }) {
       {content}
       <section>
         <div className="container max-w-5xl mx-auto my-20 px-8">
-          <h2 className="text-5xl text-center leading-relaxed font-normal mb-10 lg:mb-20">
-            Questions About {category.name}
+          <h2 className="text-5xl text-center leading-relaxed font-normal mb-4 lg:mb-10">
+            Questions About Our {category.name}
           </h2>
-          <div className="grid lg:grid-cols-2 gap-x-10">
+          <div className="mxauto">
             {categories[0].faq.map((faq) => (
               <div>
-                <p className="text-2xl lg:text-3xl leading-10 mb-5">
-                  {faq.question}
-                </p>
-                <p className="text-xl lg:max-w-2xl leading-10 mb-10">
-                  {faq.answer}
-                </p>
+                <p className="text-3xl leading-10 mb-5">{faq.question}</p>
+                <p className="text-xl leading-10 mb-10">{faq.answer}</p>
               </div>
             ))}
           </div>
