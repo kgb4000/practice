@@ -16,7 +16,7 @@ const AboutImages = () => {
             className="mx-auto"
           />
         </a>
-        <a href="/products/pinapple-sea-moss-gel-16oz">
+        <a href="/products/pineapple-sea-moss-gel-16oz">
           <CldImage
             src="https://res.cloudinary.com/browne-company/image/upload/v1708120768/pineappleSeaMossGelAssets/SMW-SMG16oz-PINEAPPLE-V1_p77dzz.png"
             alt="Pineapple Sea Moss Gel."

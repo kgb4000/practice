@@ -67,7 +67,7 @@ export default async function Post({ params }) {
               {post.title}
             </h1>
           </div>
-          <div className="hidden lg:block">
+          <div className="">
             <div className="flex flex-row justify-center">
               <div className="flex flex-row items-center">
                 <BiCalendar />
@@ -96,6 +96,7 @@ export default async function Post({ params }) {
               <span>- by {post.author.name}</span>
             </div>
           </div>
+          <p>Share This:</p>
           <ShareBtn shareLink={`https://seamosswellness.com/${post.slug}`} />
           <article>
             <RichText
