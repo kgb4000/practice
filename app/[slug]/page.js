@@ -19,7 +19,7 @@ async function getPostSlug(slug) {
              title
               date
               slug
-              description
+              metaDescription
               coverImage 
             content {
                   json
@@ -61,13 +61,13 @@ export default async function Post({ params }) {
   return (
     <>
       <section>
-        <div className="container max-w-[700px] mx-auto lg:px-0 py-36 px-4">
+        <div className="container max-w-[700px] mx-auto lg:px-0 py-44 px-8">
           <div className="">
-            <h1 className="text-4xl text-center mb-4 leading-relaxed">
+            <h1 className="text-2xl lg:text-4xl text-center mb-4 leading-relaxed">
               {post.title}
             </h1>
           </div>
-          <div className="">
+          <div className="hidden lg:block">
             <div className="flex flex-row justify-center">
               <div className="flex flex-row items-center">
                 <BiCalendar />

@@ -28,6 +28,28 @@ export const metadata = {
   alternates: {
     canonical: 'https://seamosswellness.com/shop',
   },
+  openGraph: {
+    title: 'Buy Sea Moss Online | 100% Organic | Free Shipping',
+    description:
+      'Discover the full range of our natural sea moss products. From gels to capsules and dried moss, find everything for your wellness journey here.',
+    url: 'https://seamosswellness.com/shop',
+    siteName: 'seamosswellness.com',
+    images: [
+      {
+        url: 'https://nextjs.org/og.png', // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://nextjs.org/og-alt.png', // Must be an absolute URL
+        width: 1800,
+        height: 1600,
+        alt: 'Sea Moss Wellness Shop',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 }
 
 export default async function Shop() {

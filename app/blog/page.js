@@ -37,7 +37,7 @@ export default async function Blog() {
   return (
     <>
       <section>
-        <div className="container max-w-7xl mx-auto px-8 py-40">
+        <div className="container max-w-7xl mx-auto px-8 py-44">
           <div className="text-center">
             <h1 className="text-5xl mb-8">Wellness Blog</h1>
             <p className="text-xl mb-8">
@@ -60,10 +60,10 @@ export default async function Blog() {
                         width: '100%',
                         height: 'auto',
                       }}
-                      className="mb-4 lg: mr-8"
+                      className="mb-4 lg:mr-8"
                     />
                     <div className="blog-info max-w-3xl">
-                      <h2 className="text-2xl mb-5 max-w-2xl lg:text-3xl leading-10">
+                      <h2 className="text-xl mb-5 max-w-2xl lg:text-3xl leading-10">
                         {post.title}
                       </h2>
                       <p>Read more</p>

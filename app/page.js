@@ -27,7 +27,7 @@ export default function Home() {
         backgroundImage={HeroImage}
         backgroundHeight="h-[100vh]"
         alt="Sea Moss Wellness - Ocean background."
-        padding="py-[23.5rem]"
+        padding="py-[14rem] lg:py-[23.5rem]"
         heroMarginBottom="mb-20 lg:mb-40"
         heroText="Organic Sea Moss"
         subText="Buy premium dreid sea moss, sea moss gels, and capsules"
@@ -37,7 +37,7 @@ export default function Home() {
       <OurCompany />
       <Shop />
       <section className="bg-yellow-100 py-10">
-        <div className="container max-w-7xl mx-auto my-20">
+        <div className="container max-w-7xl mx-auto lg:my-20">
           <div className="lg:grid grid-cols-2 items-center gap-x-10 h-full">
             <Image
               src={womanBg}
@@ -52,7 +52,7 @@ export default function Home() {
             />
             <div className="px-4 my-10 py-10">
               <h2 className="text-4xl lg:text-5xl text-center lg:text-left mb-4">
-                Change What You Eat
+                Start Changing What You Eat
               </h2>
               {/* <p className="text-xl mb-4 leading-loose">
                 Eating processed foods and red meat is linked to an increased
@@ -84,7 +84,7 @@ export default function Home() {
                 bloodstream. This is particularly beneficial for preventing and
                 managing diabetes.
               </p>
-              <div className="text-center lg:text-left my-5">
+              <div className="text-center lg:text-left mt-20">
                 <Link href="/shop">
                   <button className="py-4 px-10  bg-yellow-400 text-xl font-bold uppercase">
                     Shop now

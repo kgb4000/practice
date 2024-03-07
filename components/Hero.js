@@ -24,13 +24,13 @@ const HeroSection = ({
             fill
           />
           <div
-            className={`max-w-7xl mx-auto flex flex-col justify-center items-center ${padding}`}
+            className={`max-w-7xl mx-auto flex flex-col justify-center items-center ${padding} px-8`}
           >
-            <p className="text-3xl z-10">Sea Moss Wellness</p>
-            <h1 className="text-7xl lg:text-9xl text-center pb-6 z-10">
+            <p className="text-xl lg:text-3xl z-10">Sea Moss Wellness</p>
+            <h1 className="text-5xl md:text-7xl lg:text-9xl text-center pb-6 z-10">
               {heroText}
             </h1>
-            <p className="text-2xl lg:text-3xl text-center pb-4 z-10 uppercase">
+            <p className="text-xl lg:text-3xl text-center pb-4 z-10 uppercase">
               {subText}
             </p>
             {buttonText && (

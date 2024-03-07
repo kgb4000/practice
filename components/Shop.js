@@ -42,7 +42,7 @@ export default async function Shop() {
   return (
     <>
       <section>
-        <div className=" my-20 lg:my-20 px-5">
+        <div className="lg:my-20 px-5">
           <h2 className="text-5xl lg:text-5xl leading-relaxed text-ui-fg-base font-normal my-5 text-center">
             Explore Our Products
           </h2>

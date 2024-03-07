@@ -5,9 +5,9 @@ const OurCompany = () => {
   return (
     <>
       <section>
-        <div className="max-w-7xl mx-auto px-4 pb-40">
+        <div className="max-w-7xl mx-auto px-4 pb-10">
           <p className="text-xl text-center font-bold">Sea Moss Wellness</p>
-          <p className="text-5xl text-center py-8 leading-12 max-w-4xl mx-auto">
+          <p className="text-3xl lg:text-5xl text-center py-8 leading-12 max-w-4xl mx-auto">
             We're a Conscientious & Moral Black Owned Sea Moss Company
           </p>
           <p className="text-2xl text-center max-w-3xl mx-auto">
