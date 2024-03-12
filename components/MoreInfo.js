@@ -37,9 +37,7 @@ const MoreInfo = ({ product }) => {
                     content={product.ingredients.raw}
                     renderers={{
                       p: ({ children }) => (
-                        <p className="font-normal lg:my-5 list-disc ml-4">
-                          {children}
-                        </p>
+                        <p className="font-normal lg:my-5">{children}</p>
                       ),
                     }}
                   />

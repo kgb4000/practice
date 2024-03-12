@@ -134,7 +134,7 @@ export default async function Category({ params }) {
       </section>
       {content}
       <section>
-        <div className="container max-w-5xl mx-auto my-20 px-8">
+        <div className="container max-w-3xl mx-auto my-20 px-8">
           <h2 className="text-5xl text-center leading-relaxed font-normal mb-4 lg:mb-10">
             Questions About Our {category.name}
           </h2>

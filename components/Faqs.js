@@ -1,6 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
+import { Disclosure } from '@headlessui/react'
 
 const Faq = () => {
   return (
@@ -10,13 +13,45 @@ const Faq = () => {
           <h2 className="text-5xl lg:text-7xl text-center leading-relaxed font-normal mb-10 lg:mb-20">
             Questions and Answers
           </h2>
-          <div className="container grid lg:grid-cols-2 lg:gap-16 max-w-7xl mx-auto">
+          <div className="container max-w-2xl mx-auto">
+            <Disclosure as="div" className="my-2">
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="flex  justify-between w-full items-center">
+                    <div className="flex items-center  justify-between border rounded-3xl p-6 max-w-4xl">
+                      <h3 className="text-2xl lg:text-3xl leading-10">
+                        What Does Sea Moss Gel Taste Like?
+                      </h3>
+                      <span className="text-2xl font-bold">+</span>
+                    </div>
+                  </Disclosure.Button>
+                  <Disclosure.Panel>
+                    <p>
+                      <p className="text-xl max-w-2xl px-8 mt-4 leading-10 mb-10">
+                        Sea moss gel has a very mild, slightly oceanic flavor,
+                        which many describe as neutral. It doesn't have a strong
+                        taste, which makes it incredibly versatile in various
+                        dishes. When added to foods or drinks, sea moss gel
+                        often adopts the flavors of those ingredients, making it
+                        an excellent addition to smoothies, teas, soups, and
+                        sauces without altering the taste significantly. This
+                        subtle flavor profile is one of the reasons why sea moss
+                        gel is so popular; it boosts the nutritional content of
+                        meals without impacting the overall flavor.
+                      </p>
+                    </p>
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+          </div>
+          <div className="container max-w-2xl mx-auto">
             <div>
-              <div>
-                <h3 className="text-2xl lg:text-3xl leading-10 mb-5">
+              <div className="max-w-7xl mx-auto">
+                <h3 className="text-2xl lg:text-3xl leading-10 mb-5 mx-auto">
                   What Does Sea Moss Gel Taste Like?
                 </h3>
-                <p className="text-xl lg:max-w-2xl leading-10 mb-10">
+                <p className="text-xl max-w-2xl leading-10 mb-10 mx-auto">
                   Sea moss gel has a very mild, slightly oceanic flavor, which
                   many describe as neutral. It doesn't have a strong taste,
                   which makes it incredibly versatile in various dishes. When
