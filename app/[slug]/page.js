@@ -103,12 +103,12 @@ export default async function Post({ params }) {
               content={post.content.json}
               renderers={{
                 h2: ({ children }) => (
-                  <h2 className="text-2xl lg:text-4xl leading-relaxed text-ui-fg-base font-normal lg:my-5">
+                  <h2 className="text-2xl lg:text-4xl leading-relaxed font-bold lg:my-5">
                     {children}
                   </h2>
                 ),
                 h3: ({ children }) => (
-                  <h3 className="text-xl lg:text-2xl leading-relaxed text-ui-fg-base font-normal lg:my-5">
+                  <h3 className="text-xl lg:text-2xl leading-relaxed  font-semibold lg:my-5">
                     {children}
                   </h3>
                 ),
