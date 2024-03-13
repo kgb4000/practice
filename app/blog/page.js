@@ -19,7 +19,7 @@ export async function getAllPosts() {
     body: JSON.stringify({
       query: `
         query Posts {
-          posts(orderBy: createdAt_DESC, first: 20) {
+          posts(orderBy: createdAt_DESC, first: 30) {
             title
             slug
             coverImage
