@@ -165,7 +165,7 @@ export default function RootLayout({ children }) {
             __html: ` 
 
             window.SnipcartSettings = {
-              publicApiKey: "ODIwNDE1OGUtNzBiYy00YWZkLWEwMDAtNjdmYjdiYzUzZDAzNjM4NDAzNDU1NTMxMDU4NzAy",
+              publicApiKey: "MjllOGJiYWMtODYyNi00OWM3LWJjOTAtZGJkZGRmMGUyOTNkNjM4NDAzNDU1NTMxMDU4NzAy",
               loadStrategy: "on-user-interaction",
               version: "3.7.1",
               modalStyle: "side",

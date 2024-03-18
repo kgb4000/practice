@@ -7,7 +7,7 @@ const Price = ({ priceOfOne, product }) => {
   const minQuantity = 1
   const mxQuantity = 7
   const [quantity, setQuantity] = useState(minQuantity)
-  const [discount, setDiscount] = useState(10)
+  const [discount, setDiscount] = useState(15)
   const price = priceOfOne
 
   const updateCartItemQuantity = (newQuantity) => {
