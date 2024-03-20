@@ -115,7 +115,7 @@ export default async function Post({ params }) {
                 a: ({ children, href, openInNewTab }) => (
                   <Link
                     href={href}
-                    className="text-red-400 underline"
+                    className="text-blue-700 underline"
                     target={openInNewTab ? '_blank' : '_self'}
                     rel="noreferrer"
                   >

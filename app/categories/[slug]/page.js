@@ -87,7 +87,7 @@ export default async function Category({ params }) {
       <section>
         <div className="container max-w-9xl mx-auto mt-40 px-4">
           <h1 className="text-3xl lg:text-5xl text-center py-10">
-            Buy {category.name}
+            Organic {category.name}
           </h1>
           <div className="flex gap-x-[20px] py-4 justify-center items-center mb-4">
             <p className="text-center">
