@@ -104,7 +104,7 @@ export default async function Category({ params }) {
             {category.products.map((product) => {
               return (
                 <div className="mx-auto text-center hover:bg-slate-100 pt-10 pb-10 rounded-2xl">
-                  <a href={`/products/${product.slug}`}>
+                  <Link href={`/products/${product.slug}`}>
                     <Image
                       src={buildImage(product.image[0].public_id)
                         .resize(limitFill().width(600).height(600))
@@ -117,7 +117,7 @@ export default async function Category({ params }) {
                       placeholder="blur"
                       blurDataURL={base64}
                     />
-                  </a>
+                  </Link>
                   <div
                     className="yotpo bottomLine"
                     data-yotpo-product-id={product.id}

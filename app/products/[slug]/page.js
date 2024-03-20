@@ -135,7 +135,7 @@ export default async function Product({ params }) {
             {data[0].products.map((product) => (
               <div key={product.id}>
                 <div className="text-center mx-auto">
-                  <a href={`/products/${product.slug}`}>
+                  <Link href={`/products/${product.slug}`}>
                     <Image
                       src={buildImage(product.image[0].public_id)
                         .resize(limitFit().width(400).height(400))
@@ -155,7 +155,7 @@ export default async function Product({ params }) {
                       {product.name}
                     </p>
                     <p className="my-5 font-semibold">${product.price}</p>
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -169,12 +169,12 @@ export default async function Product({ params }) {
           </div>
         </div>
       </section>
-      <CustomerReviewsApp
+      {/* <CustomerReviewsApp
         product={product}
         heroMossImage={heroMossImage}
         priceOfOne={priceOfOne}
         pageURL={pageURL}
-      />
+      /> */}
       <section>
         <div className="container max-w-5xl mx-auto my-20 px-8">
           <h2 className="text-5xl text-center mb-10">Questions and Answers</h2>

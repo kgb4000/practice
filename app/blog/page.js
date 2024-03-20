@@ -19,7 +19,7 @@ export async function getAllPosts() {
     body: JSON.stringify({
       query: `
         query Posts {
-          posts(orderBy: createdAt_DESC, first: 25) {
+          posts(orderBy: createdAt_DESC, first: 27) {
             title
             slug
             coverImage
@@ -37,7 +37,7 @@ export default async function Blog() {
   return (
     <>
       <section>
-        <div className="container max-w-7xl mx-auto px-8 py-44">
+        <div className="container max-w-9xl mx-auto px-8 py-44">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl mb-8">Blog</h1>
             {/* <p className="text-xl mb-8">
@@ -48,7 +48,7 @@ export default async function Blog() {
             {posts.map((post) => (
               <div key={post.slug}>
                 <Link href={`/${post.slug}`}>
-                  <div className="max-w-3xl mx-auto flex flex-col lg:flex-row items-center mb-14">
+                  <div className="max-w-4xl mx-auto flex flex-col lg:flex-row lg:items-center mb-14">
                     <Image
                       src={buildImage(post.coverImage.public_id).toURL()}
                       alt={post.coverImage.atlText}
@@ -60,10 +60,10 @@ export default async function Blog() {
                         width: '100%',
                         height: 'auto',
                       }}
-                      className="mb-4 lg:mr-8"
+                      className="mb-4 lg:mr-8 w-1/5"
                     />
-                    <div className="blog-info max-w-3xl">
-                      <h2 className="text-xl mb-5 max-w-2xl lg:text-3xl leading-10">
+                    <div className="blog-info max-w-3xl w-4/5">
+                      <h2 className="text-2xl mb-5 max-w-2xl lg:text-4xl lg:leading-10">
                         {post.title}
                       </h2>
                       <p>Read more</p>
