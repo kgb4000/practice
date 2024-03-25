@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import soursopGel from '@/public/images/soursop-sea-moss-gel.png'
 import AddToCart from './AddToCart'
@@ -72,6 +71,7 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
               width={500}
               height={500}
               className="self-center"
+              loading="lazy"
             />
             <div>
               <div className="mb-8">
@@ -139,6 +139,7 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
                   width={40}
                   height={40}
                   className="self-center mr-2"
+                  loading="lazy"
                 />
                 <p className="text-2xl font-semibold">Sea Moss Wellness</p>
               </div>
@@ -166,6 +167,7 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
               width={400}
               height={400}
               className="md:w-1/3 mx-auto my-10"
+              loading="lazy"
             />
             <div className="md:w-1/3 mb-8">
               <p className="text-2xl font-bold">Them</p>

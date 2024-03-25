@@ -32,7 +32,7 @@ export default function Home() {
         buttonText="Shop Now"
         buttonLink="/shop"
       />
-      <OurCompany />
+      {/* <OurCompany /> */}
       <Shop />
       <section className="bg-yellow-100 py-10">
         <div className="container max-w-7xl mx-auto lg:my-20">

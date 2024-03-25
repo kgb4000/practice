@@ -24,7 +24,7 @@ const Nav = () => {
           <p>🔰 Safe Secure Checkout</p>
           <p>⭐ 15% Off Everything</p>
           <p>🚚 Fast Shipping</p>
-          <p>💲 Money Back Guarantee</p>
+          <p>💵 Money Back Guarantee</p>
         </div>
         {/* <div className="text-[0.8rem] fixed w-full z-20 bg-gray-600 text-center justify-center text-white top-0 py-4 uppercase md:hidden">
           <p>⭐ Get 15% Off Everything This Month ⭐</p>
@@ -45,6 +45,10 @@ const Nav = () => {
                   />
                 </Link>
               </div>
+              <button className="snipcart-checkout font-bold">
+                Cart
+                <span className="snipcart-items-count p-2"></span>
+              </button>
               <div className="flex lg:hidden">
                 <button
                   type="button"
@@ -125,51 +129,6 @@ const Nav = () => {
             </Dialog>
           </div>
         </div>
-        {/* <nav className="bg-gray-50 py-4 w-full z-20 md:fixed md:top-12">
-          <div className="container mx-auto flex flex-wrap items-center">
-            <div className="flex w-full md:w-1/2 justify-center md:justify-start font-extrabold">
-              <Link className="no-underline" href="/">
-                <span className="text-2xl pl-2">
-                  <i className="em em-grinning"></i>Sea Moss Wellness
-                </span>
-              </Link>
-            </div>
-            <div className="flex w-full content-center justify-between md:w-1/2 md:justify-end">
-              <ul className="flex justify-between flex-1 md:flex-none items-center mt-4">
-                <li className="mr-3">
-                  <Link
-                    className="inline-block py-2 px-3 hover:underline"
-                    href="/shop"
-                  >
-                    Shop
-                  </Link>
-                </li>
-                <li className="mr-3">
-                  <Link
-                    className="inline-block py-2 px-3 hover:underline"
-                    href="/categories/dried-sea-moss"
-                  >
-                    Dried
-                  </Link>
-                </li>
-                <li className="mr-3">
-                  <Link
-                    className="inline-block text-gray-600 no-underline hover:underline py-2 px-3"
-                    href="/categories/sea-moss-gels"
-                  >
-                    Gels
-                  </Link>
-                </li>
-                <li className="mr-3">
-                  <button className="snipcart-checkout font-bold">
-                    Cart
-                    <span className="snipcart-items-count p-2"></span>
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav> */}
       </header>
     </>
   )

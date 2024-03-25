@@ -21,10 +21,10 @@ const CallToAction = () => {
               placeholder="blur"
             />
             <div className="pt-10">
-              <h2 className="text-5xl lg:text-7xl text-center lg:text-left max-w-5xl mx-auto mb-10">
+              <h2 className="text-3xl lg:text-5xl text-center lg:text-left max-w-5xl mx-auto mb-8">
                 Win Free Sea Moss!
               </h2>
-              <p className="text-2xl text-center max-w-3xl mx-auto lg:text-left">
+              <p className="md:text-xl text-center max-w-3xl mx-auto lg:text-left">
                 Don't miss your chance to elevate your health with our
                 high-quality sea moss – it's your first step towards a more
                 vibrant, healthier you, all on us! Join our VIP community and
