@@ -4,12 +4,17 @@ import HeroImage from '@/components/HeroImage'
 import { buildImage } from '@/lib/cloudinary/cloudinary'
 import CallToAction from '@/components/CallToAction'
 import MoreInfo from '@/components/MoreInfo'
+import { RichText } from '@graphcms/rich-text-react-renderer'
 import Price from '@/components/Price'
 import Natural from '@/components/Natural'
 import Stars from '@/components/Stars'
 import CustomerReviewsApp from '@/components/CustomerReviewsApp'
 import { limitFit, fit } from '@cloudinary/url-gen/actions/resize'
 import { getPlaiceholder } from 'plaiceholder'
+import SoursopBenefits from '@/components/SoursopBenefits'
+import StrawberrySeaMossGelBenefits from '@/components/StrawberrySeaMossGelBenefits'
+import Check from '@/public/icons/check.webp'
+import AddToCart from '@/components/AddToCart'
 
 export async function getProductSlug(slug) {
   const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT, {
@@ -26,6 +31,10 @@ export async function getProductSlug(slug) {
             seoTitle
             metaDescription
             productDescription
+            featuredBenefit
+            bulletPoint1 {
+              raw
+            }
             price
             slug
             image
@@ -99,11 +108,22 @@ export default async function Product({ params }) {
 
   const { base64 } = await getPlaiceholder(buffer)
 
+  {
+    product.slug === 'soursop-sea-moss-gel-16oz' ? <SoursopBenefits /> : ' '
+  }
+
+  let content
+
+  // if (product.slug.includes('soursop-sea-moss-gel')) {
+  //   return <SoursopBenefits />
+  // } else if (product.slug.includes('strawberry-sea-moss-gel')) {
+  //   return <StrawberrySeaMossGelBenefits />
+  // }
+
   return (
     <>
-      <script type="application/ld+json"></script>
       <section>
-        <div className="container max-w-3xl lg:max-w-7xl mx-auto px-4 lg:px-0 mt-44 mb-14">
+        <div className="container max-w-3xl lg:max-w-5xl mx-auto lg:px-0 mt-20 md:mt-32 mb-8">
           <div className="lg:flex">
             <HeroImage
               product={product}
@@ -112,24 +132,79 @@ export default async function Product({ params }) {
                 .toURL()}
               alt={product.name}
             />
-            <div className="lg:w-2/5 px-4 xl:px-0">
+            <div className="lg:w-3/5 px-4 xl:px-0">
               {/* <Stars product={product} /> */}
-              <h1 className="text-5xl py-2 mt-4">{product.name}</h1>
-              <p className="text-md my-2 text-green-600">
-                PLANT-BASED | VEGAN | SUPERFOOD | NON-GMO
+              <h1 className="text-2xl md:text-4xl py-2 font-bold">
+                {product.name}
+              </h1>
+              <p className="text-gray-400 text-2xl mb-2">
+                {/* <Natural /> */}
+                {product.featuredBenefit}
               </p>
-              <p className="text-xl my-4">{product.productDescription}</p>
-              <Price product={product} priceOfOne={priceOfOne} />
+              {/* <Natural /> */}
+              {/* <p className="py-2">{product.productDescription}</p> */}
+              {product.bulletPoint1 ? (
+                <RichText
+                  content={product.bulletPoint1.raw}
+                  renderers={{
+                    ul: ({ children }) => (
+                      <ul className="list-disc list-outside ml-4">
+                        {children}
+                      </ul>
+                    ),
+                    li: ({ children }) => (
+                      <li className="leading-8">{children}</li>
+                    ),
+                  }}
+                />
+              ) : (
+                ' '
+              )}
               <Natural />
+              <div className="bg-gray-600 rounded-xl text-white py-3 px-4 text-[0.8rem] text-center md:text-left">
+                ⭐ Enjoy 15% Off Today | No Code Needed ⭐
+              </div>
+              <Price product={product} priceOfOne={priceOfOne} />
+              {/* <Natural /> */}
             </div>
           </div>
         </div>
       </section>
-      {product.benefits ? <MoreInfo product={product} /> : ' '}
+      {product.slug.includes('soursop-sea-moss-gel') ? (
+        <SoursopBenefits product={product} priceOfOne={priceOfOne} />
+      ) : product.slug.includes('strawberry-sea-moss-gel') ? (
+        <StrawberrySeaMossGelBenefits
+          product={product}
+          priceOfOne={priceOfOne}
+        />
+      ) : (
+        ' '
+      )}
+      {/* {product.benefits ? <MoreInfo product={product} /> : ' '} */}
       <section>
-        <div className="container max-w-7xl mx-auto my-20 px-8">
-          <h2 className="text-3xl lg:text-5xl text-center mb-20">
-            More Products You May Like
+        <div className="container max-w-5xl mx-auto my-10 md:my-20 px-4">
+          <h2 className="text-3xl lg:text-5xl text-center mb-8">
+            Questions and Answers
+          </h2>
+          <div>
+            <div className="lg:grid grid-cols-2 gap-x-14">
+              {product.faq.map((faq) => (
+                <div key={faq.id}>
+                  <div>
+                    <p className="text-xl md:text-2xl mb-4">{faq.question}</p>
+                    <p className="md:text-xl mb-4">{faq.answer}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <AddToCart product={product} priceOfOne={priceOfOne} />
+        </div>
+      </section>
+      <section>
+        <div className="container max-w-7xl mx-auto my-14 md:my-20 px-8">
+          <h2 className="text-3xl lg:text-5xl text-center mb-8">
+            Other Products You May Like
           </h2>
           <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4">
             {data[0].products.map((product) => (
@@ -163,7 +238,7 @@ export default async function Product({ params }) {
           <div className="my-5 text-center">
             <Link href="/shop">
               <button className="py-4 px-10 bg-yellow-400 text-xl font-bold uppercase">
-                Back to Shop
+                Shop Some More
               </button>
             </Link>
           </div>
@@ -175,23 +250,7 @@ export default async function Product({ params }) {
         priceOfOne={priceOfOne}
         pageURL={pageURL}
       /> */}
-      <section>
-        <div className="container max-w-5xl mx-auto my-20 px-8">
-          <h2 className="text-5xl text-center mb-10">Questions and Answers</h2>
-          <div>
-            <div className="lg:grid grid-cols-2 gap-x-14">
-              {product.faq.map((faq) => (
-                <div key={faq.id}>
-                  <div>
-                    <p className="text-2xl mb-4">{faq.question}</p>
-                    <p className="text-xl mb-4">{faq.answer}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+
       <CallToAction />
     </>
   )

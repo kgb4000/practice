@@ -10,8 +10,8 @@ export default function MainheroImage({ bigMossImage, alt }) {
         <Image
           src={bigMossImage}
           alt={alt}
-          width={375}
-          height={356}
+          width={175}
+          height={256}
           priority
           style={{
             maxWidth: '100%',
@@ -23,8 +23,8 @@ export default function MainheroImage({ bigMossImage, alt }) {
         <Image
           src={bigMossImage}
           alt={alt}
-          width={800}
-          height={760}
+          width={700}
+          height={560}
           priority
           style={{
             maxWidth: '100%',

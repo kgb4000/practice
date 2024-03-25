@@ -21,45 +21,42 @@ const AboutUs = () => {
             />
             <div>
               <div className="mt-10">
-                <h2 className="text-5xl lg:text-7xl mb-10">
+                <h2 className="text-3xl md:text-5xl mb-8">
                   About Sea Moss Wellness
                 </h2>
-                <p className="text-xl mb-4">
+                <p className="md:text-xl mb-4">
                   I'm Kester, the heart and soul behind Sea Moss Wellness.
                 </p>
-                <p className="text-xl mb-4">
+                <p className="md:text-xl mb-4">
                   From the very start, my dream was to create something truly
                   special – a company that stands for more than just profit.
                 </p>
-                <p className="text-xl mb-4">
+                <p className="md:text-xl mb-4">
                   Every day, my team and I pour our values, integrity, and
                   unwavering dedication into everything we do, from sourcing our
                   sea moss, to our packaging.
                 </p>
-                <p className="text-xl mb-4">
+                <p className="md:text-xl mb-4">
                   At Sea Moss Wellness, it's not just about running a business;
                   it's about giving you the best products.
                 </p>
-                <p className="text-xl mb-4">
+                <p className="md:text-xl mb-4">
                   I'm personally involved in every part of the process because
                   putting my name on it means something.
                 </p>
-                <p className="text-xl mb-4">
+                <p className="md:text-xl mb-4">
                   After all, my family and I use sea moss every day, and I
                   wouldn't have it any other way.
                 </p>
-                <p className="text-xl mb-4">
+                <p className="md:text-xl mb-4">
                   Your trust means the world to me.
                 </p>
-                <p className="text-xl mb-4">
+                <p className="md:text-xl mb-4">
                   Thank you for being part of our journey at Sea Moss Wellness.
                 </p>
-                {/* <p className="text-xl mb-4">
-                  Here's to health, happiness, and a little bit of sea moss
-                  magic.
-                </p> */}
-                <p className="text-xl mb-10">Warm regards,</p>
-                <p className="text-xl mb-4">Kester</p>
+
+                <p className="md:text-xl mb-4">Warm regards,</p>
+                <p className="md:text-xl mb-4">Kester</p>
               </div>
             </div>
           </div>

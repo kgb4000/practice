@@ -14,32 +14,74 @@ const HeroSection = ({
 }) => {
   return (
     <>
-      <section className="relative">
-        <div className={`${backgroundHeight} relative ${heroMarginBottom}`}>
-          <Image
+      <section>
+        <div className={`${backgroundHeight} ${heroMarginBottom}`}>
+          {/* <Image
             src={backgroundImage}
             alt={alt}
             priority
             objectFit="cover"
             fill
-          />
+          /> */}
           <div
-            className={`max-w-7xl mx-auto flex flex-col justify-center items-center ${padding} px-8`}
+            className={`max-w-5xl flex flex-col justify-center ${padding} px-12`}
           >
-            <p className="text-xl lg:text-3xl z-10">Sea Moss Wellness</p>
-            <h1 className="text-5xl md:text-7xl lg:text-9xl text-center pb-6 z-10">
+            <h1 className="text-7xl md:text-8xl lg:text-9xl pb-6">
               {heroText}
             </h1>
-            <p className="text-xl lg:text-3xl text-center pb-4 z-10 uppercase">
-              {subText}
-            </p>
+            <p className="text-xl lg:text-2xl pb-4 uppercase">{subText}</p>
             {buttonText && (
-              <Link href={buttonLink} className="z-10">
-                <button className="py-4 px-10  bg-yellow-400 text-xl font-bold uppercase">
-                  {buttonText}
-                </button>
-              </Link>
+              <div className="md:flex items-center">
+                <Link href={buttonLink}>
+                  <button className="py-4 px-10 bg-yellow-400 md:text-xl font-bold uppercase">
+                    {buttonText}
+                  </button>
+                </Link>
+                <p className="md:ml-3 pt-2">Made in the USA 🇺🇸 </p>
+              </div>
             )}
+            <div className="flex justify-between w-[250px] py-4">
+              <Image
+                src="/icons/no-gmo.png"
+                alt="No GMO."
+                width={50}
+                height={50}
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
+              />
+              <Image
+                src="/icons/organic.png"
+                alt="Organic."
+                width={50}
+                height={50}
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
+              />
+              <Image
+                src="/icons/gluten-free.png"
+                alt="Gluten free."
+                width={50}
+                height={50}
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
+              />
+              <Image
+                src="/icons/vegan.png"
+                alt="Vegan."
+                width={50}
+                height={50}
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -85,19 +85,19 @@ export default async function Category({ params }) {
   return (
     <>
       <section>
-        <div className="container max-w-9xl mx-auto mt-40 px-4">
-          <h1 className="text-3xl lg:text-5xl text-center py-10">
+        <div className="container max-w-9xl mx-auto mt-32 px-4">
+          <h1 className="text-3xl lg:text-5xl text-center">
             Organic {category.name}
           </h1>
           <div className="flex gap-x-[20px] py-4 justify-center items-center mb-4">
             <p className="text-center">
-              <Link href="/shop">All products</Link>
+              <Link href="/shop">All</Link>
             </p>
             <p className="text-center">
-              <Link href="/categories/dried-sea-moss">Dried Sea Moss</Link>
+              <Link href="/categories/dried-sea-moss">Dried</Link>
             </p>
             <p className="text-center">
-              <Link href="/categories/sea-moss-gels">Sea Moss Gels</Link>
+              <Link href="/categories/sea-moss-gels">Gels</Link>
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 my-4">
@@ -134,15 +134,17 @@ export default async function Category({ params }) {
       </section>
       {content}
       <section>
-        <div className="container max-w-3xl mx-auto my-20 px-8">
-          <h2 className="text-5xl text-center leading-relaxed font-normal mb-4 lg:mb-10">
+        <div className="container max-w-3xl mx-auto my-20 px-4">
+          <h2 className="text-3xl md:text-5xl text-center leading-relaxed font-normal mb-4 lg:mb-10">
             Questions About Our {category.name}
           </h2>
           <div className="mxauto">
             {categories[0].faq.map((faq) => (
               <div>
-                <p className="text-3xl leading-10 mb-5">{faq.question}</p>
-                <p className="text-xl leading-10 mb-10">{faq.answer}</p>
+                <p className="text-xl md:text-2xl leading-10 mb-5">
+                  {faq.question}
+                </p>
+                <p className="md:text-xl leading-10 mb-10">{faq.answer}</p>
               </div>
             ))}
           </div>

@@ -4,7 +4,7 @@ import Shop from '@/components/Shop'
 import Vitamins from '@/components/Vitamins'
 import BlogSection from '@/components/BlogSection'
 import Faq from '@/components/Faqs'
-import womanBg from '../public/images/black-woman-in-kitchen.webp'
+import womanBg from '@/public/images/black-woman-in-kitchen.webp'
 import AboutUs from '@/components/AboutUs'
 import CallToAction from '@/components/CallToAction'
 import Hero from '@/components/Hero'
@@ -24,13 +24,11 @@ export default function Home() {
   return (
     <>
       <Hero
-        backgroundImage={HeroImage}
-        backgroundHeight="h-[100vh]"
-        alt="Sea Moss Wellness - Ocean background."
-        padding="py-[14rem] sm:py-[10rem] lg:py-[23.5rem]"
+        backgroundHeight="lg:h-[100vh]"
+        padding="py-[8rem] sm:py-[10rem] lg:py-[10rem] lg:pl-[14rem]"
         heroMarginBottom="mb-20 lg:mb-40"
-        heroText="Organic Sea Moss"
-        subText="Buy premium dreid sea moss, sea moss gels, and capsules"
+        heroText="Premium Organic Sea Moss"
+        subText="Buy dreid sea moss and infused sea moss gels to Help Improve your health"
         buttonText="Shop Now"
         buttonLink="/shop"
       />
@@ -60,25 +58,25 @@ export default function Home() {
                 advocating for a transition to diets rich in fruits, vegetables,
                 whole grains, and lean proteins.
               </p> */}
-              <p className="text-xl mb-4 leading-loose">
+              <p className="md:text-xl mb-4 leading-loose">
                 Changing what we eat is not merely a personal choice but a
                 necessity to foster a healthier you.
               </p>
-              <p className="text-xl mb-4 leading-loose">
+              <p className="md:text-xl mb-4 leading-loose">
                 Consuming organic foods like sea moss can help:
               </p>
-              <p className="text-xl mb-4 leading-loose">
+              <p className="md:text-xl mb-4 leading-loose">
                 <b>Reduced Risk of Chronic Diseases:</b> Studies show that
                 people who eat more plant-based foods lower the risk of
                 developing chronic diseases like heart disease, diabetes, and
                 certain cancers.
               </p>
-              <p className="text-xl mb-4 leading-loose">
+              <p className="md:text-xl mb-4 leading-loose">
                 <b>Heart Health:</b> A diet rich in fruits, vegetables, legumes,
                 and whole grains can lower blood pressure, reduce cholesterol
                 levels, and decrease the risk of heart disease.
               </p>
-              <p className="text-xl mb-4 leading-loose">
+              <p className="md:text-xl mb-4 leading-loose">
                 <b> Blood Sugar Control:</b> High-fiber foods can help regulate
                 blood sugar levels by slowing down sugar absorption in the
                 bloodstream. This is particularly beneficial for preventing and

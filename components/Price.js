@@ -1,7 +1,10 @@
 'use client'
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 import { buildImage } from '@/lib/cloudinary/cloudinary'
+import SecureCheckout from './SecureCheckout'
+import Shipping from './Shipping'
 
 const Price = ({ priceOfOne, product }) => {
   const minQuantity = 1
@@ -13,7 +16,7 @@ const Price = ({ priceOfOne, product }) => {
   const updateCartItemQuantity = (newQuantity) => {
     const addToCart = document.querySelector('.snipcart-add-item')
     addToCart.setAttribute('data-item-quantity', newQuantity.toString())
-    calculateDiscount(newQuantity)
+    // calculateDiscount(newQuantity)
   }
 
   const handleQuantityChange = (e) => {
@@ -46,19 +49,19 @@ const Price = ({ priceOfOne, product }) => {
   }
 
   const calculateDiscount = (quantity) => {
-    let newDiscount = 0
-    if (quantity >= 1) {
-      newDiscount = 10
-    }
-    // } else if (quantity === 2) {
-    //   newDiscount = 12
+    // let newDiscount = 0
+    // if (quantity >= 1) {
+    //   newDiscount = 10
     // }
-    // } else if (quantity === 3) {
-    //   newDiscount = 12
-    // } else if (quantity >= 4) {
-    //   newDiscount = 17
-    // }
-    setDiscount(newDiscount)
+    // // } else if (quantity === 2) {
+    // //   newDiscount = 12
+    // // }
+    // // } else if (quantity === 3) {
+    // //   newDiscount = 12
+    // // } else if (quantity >= 4) {
+    // //   newDiscount = 17
+    // // }
+    setDiscount()
   }
 
   const calculateDiscountedPrice = () => {
@@ -68,38 +71,49 @@ const Price = ({ priceOfOne, product }) => {
 
   return (
     <>
-      <button className="border py-2 px-4" onClick={handleIncrement}>
-        +
-      </button>
+      <div className="flex flex-row items-center justify-between">
+        <div>
+          <button className="border p-2 rounded-xl" onClick={handleDecrement}>
+            -
+          </button>
 
-      <span
-        className="py-2 px-4 snipcart-add-item"
-        onChange={handleQuantityChange}
-      >
-        {quantity}
-      </span>
-      <button className="border py-2 px-4" onClick={handleDecrement}>
-        -
-      </button>
-      <div className="my-4">
-        <div className="flex items-center justify-between">
-          <p className="text-2xl text-green-600 font-bold my-1">
+          <span
+            className="py-2 px-3 snipcart-add-item"
+            onChange={handleQuantityChange}
+          >
+            {quantity}
+          </span>
+          <button className="border p-2 rounded-xl" onClick={handleIncrement}>
+            +
+          </button>
+        </div>
+        <div className="my-4">
+          <div className="flex items-center justify-between">
+            {/* <p className="text-xl text-red-600 font-bold my-1">
             You're saving: {discount}%
-          </p>
-          <p className="text-2xl text-green-600 font-bold text-right">
-            ${(calculateDiscountedPrice() * quantity).toFixed(2)}{' '}
-            <span className="line-through text-gray-900 text-xl">
+          </p> */}
+            <p className="text-xl md:text-2xl text-red-600 font-bold text-right mr-2">
+              ${(calculateDiscountedPrice() * quantity).toFixed(2)}
+            </p>
+            <p className="line-through text-gray-400">
               ${(price * quantity).toFixed(2)}
-            </span>
-          </p>
+              {''}
+            </p>
+            <p className="text-[0.6rem] uppercase md:block">
+              {' '}
+              {product.slug.includes('soursop')
+                ? '🔥Hot item'
+                : '🔥Moving fast'}
+            </p>
+          </div>
         </div>
       </div>
       <button
-        className="px-4 py-5 rounded-xl w-full text-2xl font-bold bg-yellow-300 hover:bg-yellow-400 snipcart-add-item"
+        className="py-4 rounded-xl w-full text-xl font-bold bg-yellow-300 hover:bg-yellow-400 snipcart-add-item shadow-lg"
         onClick={handleAddToCart}
         data-item-id={product.id}
         data-item-price={calculateDiscountedPrice().toFixed(2)}
-        data-item-description={product.metaDescription}
+        data-item-description={product.productDescription}
         data-item-image={buildImage(product.image[0].public_id).toURL()}
         data-item-name={product.name}
         data-item-url={`/products/${product.slug}`}
@@ -107,11 +121,10 @@ const Price = ({ priceOfOne, product }) => {
         data-item-min-quantity={minQuantity}
         data-item-max-quantity={mxQuantity}
       >
-        Add to Cart
+        Get My {discount}% Off Now {'>'}
       </button>
-      {/* <button className="snipcart-checkout px-4 py-5 my-2 rounded-xl w-full text-2xl font-bold bg-blue-500 hover:bg-blue-700 text-white">
-        Checkout
-      </button> */}
+      <SecureCheckout />
+      <Shipping />
     </>
   )
 }

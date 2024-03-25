@@ -10,7 +10,7 @@ export default function HeroImage({ heroMossImage, product }) {
   return (
     <>
       <div className="flex md:flex-row">
-        <div className="lg:w-1/5 lg:flex flex-col justify-start hidden">
+        <div className="lg:w-2/5 lg:flex flex-col justify-start hidden">
           {product.image.map((moss, index) => (
             <div key={product.index}>
               <MossCard
@@ -26,7 +26,7 @@ export default function HeroImage({ heroMossImage, product }) {
         </div>
         <MainheroImage bigMossImage={bigMossImage} alt={product.name} />
       </div>
-      <div className="flex max-w-[400px] mx-auto justify-center lg:hidden mb-8">
+      <div className="flex max-w-[400px] mx-auto justify-center lg:hidden mb-2">
         {product.image.map((moss, index) => (
           <div key={product.index}>
             <MossCard

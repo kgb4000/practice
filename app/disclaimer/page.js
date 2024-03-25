@@ -21,7 +21,7 @@ const Disclaimer = () => {
     <>
       <section>
         <div className="container max-w-3xl mx-auto my-40 px-6">
-          <h1 className="text-center text-5xl lg:text-7xl py-10">
+          <h1 className="text-center text-3xl lg:text-5xl py-10">
             Medical Disclaimer
           </h1>
           <p className="text-xl mb-5">

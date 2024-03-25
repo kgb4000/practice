@@ -4,35 +4,41 @@ import Image from 'next/image'
 const Natural = () => {
   return (
     <>
-      <div className="mt-4"></div>
-      <div className="grid grid-cols-4 justify-between">
+      <div className="flex justify-between w-[250px] py-2">
         <Image
           src="/icons/no-gmo.png"
           alt="No GMO."
-          width={70}
-          height={70}
-          className="mx-auto"
+          width={40}
+          height={40}
+          style={{ maxWidth: '100%', height: 'auto' }}
         />
         <Image
           src="/icons/organic.png"
           alt="Organic."
-          width={70}
-          height={70}
-          className="mx-auto"
+          width={40}
+          height={40}
+          style={{ maxWidth: '100%', height: 'auto' }}
         />
         <Image
           src="/icons/gluten-free.png"
           alt="Gluten free."
-          width={70}
-          height={70}
-          className="mx-auto"
+          width={40}
+          height={40}
+          style={{ maxWidth: '100%', height: 'auto' }}
+        />
+        <Image
+          src="/icons/keto.png"
+          alt="Keto."
+          width={40}
+          height={40}
+          style={{ maxWidth: '100%', height: 'auto' }}
         />
         <Image
           src="/icons/vegan.png"
           alt="Vegan."
-          width={70}
-          height={70}
-          className="mx-auto"
+          width={40}
+          height={40}
+          style={{ maxWidth: '100%', height: 'auto' }}
         />
       </div>
     </>

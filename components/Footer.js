@@ -61,11 +61,6 @@ const Footer = () => {
                     Disclaimer
                   </Link>
                 </li>
-                <li>
-                  <Link href="/reviews" className="hover:underline">
-                    Reviews
-                  </Link>
-                </li>
               </ul>
             </div>
             <div className="flex flex-col gap-y-2 mb-16">
