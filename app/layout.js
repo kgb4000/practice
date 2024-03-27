@@ -176,7 +176,7 @@ export default function RootLayout({ children }) {
           }}
           strategy="beforeInteractive"
         />
-        {/* <Script
+        <Script
           id="fb-pixel"
           dangerouslySetInnerHTML={{
             __html: `
@@ -192,7 +192,7 @@ export default function RootLayout({ children }) {
           `,
           }}
           strategy="lazyOnload"
-        /> */}
+        />
         {/* <Script
           dangerouslySetInnerHTML={{
             __html: `

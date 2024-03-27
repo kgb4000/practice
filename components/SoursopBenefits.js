@@ -10,7 +10,15 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
       <section>
         <div className="container max-w-9xl mx-auto my-10 lg:my-10 px-4">
           <h2 className="text-3xl lg:text-5xl mx-auto text-center mb-4 max-w-2xl">
-            Soursop Sea Moss Gel Health Benefits
+            <span className="flex justify-center items-center">
+              <Image
+                src="/icons/soursop.png"
+                width={100}
+                height={100}
+                style={{ maxWidth: '100%', height: 'auto' }}
+              />{' '}
+              Soursop Sea Moss Gel Health Benefits
+            </span>
           </h2>
           <p className="text-[1.1rem] max-w-3xl mx-auto text-center mb-4 md:text-xl">
             Soursop sea moss gel combines the nutritional benefits of sea moss,
@@ -149,7 +157,6 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
                   ✅ Authentic Wild-Harvested Sea Moss from St. Lucia.
                 </p>
                 <p className="py-2">✅ FDA-Approved Food-Grade Facility.</p>
-
                 <p className="py-2">
                   ✅ Third-Party Tested for Purity and Potency.
                 </p>
@@ -172,13 +179,12 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
             <div className="md:w-1/3 mb-8">
               <p className="text-2xl font-bold">Them</p>
               <div className="my-2">
-                <p className="py-2">❌ Real Soursop.</p>
+                <p></p>
                 <p className="py-2">❌ Fake Pool Grown Sea Moss.</p>
                 <p className="py-2">❌ Made in home kitchen.</p>
                 <p className="py-2">❌ Using Artificial Preservatives.</p>
                 <p className="py-2">❌ Long Shipping Times</p>
-                <p className="py-2">❌ Real Soursop</p>
-                <p className="py-2">❌ Real Soursop</p>
+                <p className="py-2">❌ No Third party Testing</p>
               </div>
             </div>
           </div>

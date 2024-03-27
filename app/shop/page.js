@@ -69,7 +69,7 @@ export default async function Shop() {
   return (
     <>
       <section>
-        <div className="container max-w-9xl mx-auto mt-32 px-8">
+        <div className="container max-w-9xl mx-auto lg:px-0 pt-20 md:pt-36 pb-16 px-4">
           <h1 className="text-4xl lg:text-5xl text-center">
             Our Sea Moss Products
           </h1>

@@ -25,7 +25,7 @@ export default function Home() {
     <>
       <Hero
         backgroundHeight="lg:h-[100vh]"
-        padding="py-[8rem] sm:py-[10rem] lg:py-[10rem] lg:pl-[14rem]"
+        padding="py-[8rem] sm:py-[10rem] md:py-[20rem] lg:pl-[14rem]"
         heroMarginBottom="mb-20 lg:mb-40"
         heroText="Premium Organic Sea Moss"
         subText="Buy dreid sea moss and infused sea moss gels to Help Improve your health"

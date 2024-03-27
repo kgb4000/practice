@@ -15,6 +15,7 @@ import SoursopBenefits from '@/components/SoursopBenefits'
 import StrawberrySeaMossGelBenefits from '@/components/StrawberrySeaMossGelBenefits'
 import Check from '@/public/icons/check.webp'
 import AddToCart from '@/components/AddToCart'
+import FloatingButton from '@/components/FloatingButton'
 
 export async function getProductSlug(slug) {
   const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT, {
@@ -137,6 +138,7 @@ export default async function Product({ params }) {
               <h1 className="text-2xl md:text-4xl py-2 font-bold">
                 {product.name}
               </h1>
+
               <p className="text-gray-400 text-2xl mb-2">
                 {/* <Natural /> */}
                 {product.featuredBenefit}
@@ -252,6 +254,13 @@ export default async function Product({ params }) {
       /> */}
 
       <CallToAction />
+      {/* <div className="max-w-4xl mx-auto px-4 flex justify-center lg:hidden">
+        <div className="fixed bottom-0 ">
+          <div className="">
+            <FloatingButton product={product} priceOfOne={priceOfOne} />
+          </div>
+        </div>
+      </div> */}
     </>
   )
 }

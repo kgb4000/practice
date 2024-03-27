@@ -61,7 +61,7 @@ export default async function Post({ params }) {
   return (
     <>
       <section>
-        <div className="container max-w-[700px] mx-auto lg:px-0 pt-44 pb-16 px-8">
+        <div className="container max-w-[700px] mx-auto lg:px-0 pt-20 md:pt-36 pb-16 px-4">
           <div className="">
             <h1 className="text-2xl lg:text-4xl text-center mb-4 leading-relaxed">
               {post.title}
@@ -115,7 +115,7 @@ export default async function Post({ params }) {
                 a: ({ children, href, openInNewTab }) => (
                   <Link
                     href={href}
-                    className="text-blue-700 underline"
+                    className="text-blue-700 underline break-normal"
                     target={openInNewTab ? '_blank' : '_self'}
                     rel="noreferrer"
                   >
@@ -123,12 +123,12 @@ export default async function Post({ params }) {
                   </Link>
                 ),
                 p: ({ children }) => (
-                  <p className="text-xl leading text-ui-fg-base font-normal my-6 leading-8">
+                  <p className="text-xl leading font-normal my-6 leading-8 break-normal">
                     {children}
                   </p>
                 ),
                 li: ({ children }) => (
-                  <li className="text-xl leading-relaxed text-ui-fg-base font-normal lg:my-5 list-disc mx-10">
+                  <li className="text-xl leading-relaxed font-normal lg:my-5 list-disc mx-10 break-normal">
                     {children}
                   </li>
                 ),

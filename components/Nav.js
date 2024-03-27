@@ -26,7 +26,7 @@ const Nav = () => {
           <p>🚚 Fast Shipping</p>
           <p>💵 Money Back Guarantee</p>
         </div>
-        {/* <div className="text-[0.8rem] fixed w-full z-20 bg-gray-600 text-center justify-center text-white top-0 py-4 uppercase md:hidden">
+        {/* <div className="text-[0.8rem] fixed w-full z-20 bg-gray-600 text-center justify-center text-white top-14 py-4 uppercase md:hidden">
           <p>⭐ Get 15% Off Everything This Month ⭐</p>
         </div> */}
         <div className="bg-white">
@@ -45,7 +45,7 @@ const Nav = () => {
                   />
                 </Link>
               </div>
-              <button className="snipcart-checkout font-bold">
+              <button className="snipcart-checkout font-bold lg:hidden">
                 Cart
                 <span className="snipcart-items-count p-2"></span>
               </button>
