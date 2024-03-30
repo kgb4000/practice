@@ -115,7 +115,7 @@ export default async function Post({ params }) {
                 a: ({ children, href, openInNewTab }) => (
                   <Link
                     href={href}
-                    className="text-blue-700 underline break-normal"
+                    className="text-red-500 underline break-normal"
                     target={openInNewTab ? '_blank' : '_self'}
                     rel="noreferrer"
                   >
@@ -123,7 +123,7 @@ export default async function Post({ params }) {
                   </Link>
                 ),
                 p: ({ children }) => (
-                  <p className="text-xl leading font-normal my-6 leading-8 break-normal">
+                  <p className="lg:text-xl leading font-normal my-6 leading-8 break-normal">
                     {children}
                   </p>
                 ),
@@ -141,9 +141,9 @@ export default async function Post({ params }) {
             authorBio={post.author.bio}
             authorName={post.author.name}
           />
-          <div className="text-center my-4">
+          <div className="text-center my-8">
             <Link href="/blog">
-              <button className="py-8 px-10  bg-slate-400 text-xl text-white font-bold uppercase">
+              <button className="py-6 px-10  bg-slate-400 text-xl text-white font-semibold uppercase rounded-xl">
                 Back to Blog
               </button>
             </Link>

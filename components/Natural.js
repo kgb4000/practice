@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Natural = () => {
   return (
     <>
-      <div className="flex justify-between w-[350px] py-4 mx-auto">
+      <div className="flex justify-between w-[300px] py-4 mx-auto">
         <Image
           src="/icons/no-gmo.png"
           alt="No GMO."

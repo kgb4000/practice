@@ -59,8 +59,9 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
             <span className="flex justify-center items-center">
               <Image
                 src={soursopEmoji}
-                width={100}
-                height={100}
+                width={70}
+                height={70}
+                alt="Soursop emogi."
                 style={{ maxWidth: '100%', height: 'auto' }}
               />{' '}
               Soursop Sea Moss Gel Health Benefits
@@ -124,7 +125,7 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
               alt="Soursop sea moss gel."
               width={500}
               height={500}
-              className="self-center"
+              className="mx-auto lg:self-center"
               loading="lazy"
             />
             <div>

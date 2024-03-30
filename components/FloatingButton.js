@@ -1,12 +1,30 @@
 'use client'
 
-import React from 'react'
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { buildImage } from '@/lib/cloudinary/cloudinary'
 import SecureCheckout from './SecureCheckout'
 import Image from 'next/image'
 
-const AddToCart = ({ priceOfOne, product }) => {
+const FloatingButton = ({ priceOfOne, product }) => {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      const windowHeight = window.innerHeight
+      const quarterPageHeight = windowHeight * 0.15
+
+      // Show the button if scrolled beyond 25% of the page
+      setIsVisible(scrollPosition > 900)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   const minQuantity = 1
   const mxQuantity = 7
   const [quantity, setQuantity] = useState(minQuantity)
@@ -70,9 +88,9 @@ const AddToCart = ({ priceOfOne, product }) => {
   }
   return (
     <>
-      <div className="mx-auto mb-4">
+      <div className="w-full fixed bottom-4 py-10 text-center md:hidden">
         <button
-          className="px-8 py-5 rounded-xl w-full text-xl font-bold bg-yellow-300 hover:bg-yellow-400 snipcart-add-item"
+          className={`px-4 py-5 rounded-xl text-xl font-bold bg-red-600 hover:bg-yellow-400 snipcart-add-item text-white ${isVisible ? '' : 'hidden'}`}
           onClick={handleAddToCart}
           data-item-id={product.id}
           data-item-price={calculateDiscountedPrice().toFixed(2)}
@@ -84,11 +102,18 @@ const AddToCart = ({ priceOfOne, product }) => {
           data-item-min-quantity={minQuantity}
           data-item-max-quantity={mxQuantity}
         >
-          Get My {discount}% Off Now {'>'}
+          <div className="flex justify-center items-center">
+            {/* <Image
+              src={buildImage(product.image[0].public_id).toURL()}
+              width={50}
+              height={50}
+            />{' '} */}
+            Get My {discount}% Off Now 👉
+          </div>
         </button>
       </div>
     </>
   )
 }
 
-export default AddToCart
+export default FloatingButton

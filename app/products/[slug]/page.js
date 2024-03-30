@@ -1,3 +1,5 @@
+'use server'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import HeroImage from '@/components/HeroImage'
@@ -167,7 +169,6 @@ export default async function Product({ params }) {
                 ⭐ Enjoy 15% Off Today | No Code Needed ⭐
               </div>
               <Price product={product} priceOfOne={priceOfOne} />
-              {/* <Natural /> */}
             </div>
           </div>
         </div>
@@ -182,7 +183,6 @@ export default async function Product({ params }) {
       ) : (
         ' '
       )}
-      {/* {product.benefits ? <MoreInfo product={product} /> : ' '} */}
       <section>
         <div className="container max-w-5xl mx-auto my-10 md:my-20 px-4">
           <h2 className="text-3xl lg:text-5xl text-center mb-8">
@@ -246,6 +246,7 @@ export default async function Product({ params }) {
           </div>
         </div>
       </section>
+      <FloatingButton product={product} priceOfOne={priceOfOne} />
       {/* <CustomerReviewsApp
         product={product}
         heroMossImage={heroMossImage}

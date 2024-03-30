@@ -8,7 +8,6 @@ import womanBg from '@/public/images/black-woman-in-kitchen.webp'
 import AboutUs from '@/components/AboutUs'
 import CallToAction from '@/components/CallToAction'
 import Hero from '@/components/Hero'
-import OurCompany from '@/components/OurCompany'
 import HeroImage from '@/public/images/ocean-bg.webp'
 import Transforamtion from '@/components/Transforamtion'
 
@@ -25,8 +24,9 @@ export default function Home() {
   return (
     <>
       <Hero
+        backgroundImage={HeroImage}
         backgroundHeight="lg:h-[100vh]"
-        padding="py-[8rem] sm:py-[10rem] md:py-[10rem] lg:pl-[14rem]"
+        padding="py-[10rem] sm:py-[12rem] md:py-[10rem] md:pl-[8rem] lg:pl-[14rem] xl:py-[20rem]"
         heroMarginBottom="mb-20 lg:mb-40"
         heroText="Premium Organic Sea Moss"
         subText="Buy dreid sea moss and infused sea moss gels to Help Improve your health"

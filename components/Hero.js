@@ -14,7 +14,7 @@ const HeroSection = ({
 }) => {
   return (
     <>
-      <section>
+      <section className="bg-green-600">
         <div className={`${backgroundHeight} ${heroMarginBottom}`}>
           {/* <Image
             src={backgroundImage}
@@ -24,7 +24,7 @@ const HeroSection = ({
             fill
           /> */}
           <div
-            className={`max-w-5xl flex flex-col justify-center ${padding} px-12`}
+            className={`max-w-5xl flex flex-col justify-center ${padding} px-12 text-white`}
           >
             <h1 className="text-7xl md:text-8xl lg:text-9xl pb-6">
               {heroText}

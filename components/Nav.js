@@ -24,7 +24,7 @@ const Nav = () => {
           <p>🇺🇸 Made in the USA </p>
           <p>🔐 Safe Secure Checkout</p>
           <p>⭐ 15% Off Everything</p>
-          <p>🚚 Fast Shipping</p>
+          <p>🚚 Free Shipping On Orders {'>'} $100</p>
           <p>💵 Money Back Guarantee</p>
         </div>
         {/* <div className="text-[0.8rem] fixed w-full z-20 bg-gray-600 text-center justify-center text-white top-14 py-4 uppercase md:hidden">
