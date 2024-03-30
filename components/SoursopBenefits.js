@@ -17,8 +17,8 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
           <h2 className="text-3xl lg:text-5xl mx-auto text-center mb-4 max-w-2xl leading-relaxed">
             Boost Your Health & Energy In 3 Simple Steps
           </h2>
-          <div className="my-20 flex">
-            <div className="w-1/3 flex flex-col">
+          <div className="lg:my-20 lg:flex">
+            <div className="lg:w-1/3 py-4 px-4">
               <IoCartOutline className="text-5xl md:text-7xl mx-auto" />
               <p className="text-3xl py-5 text-center italic">Step 1.</p>
               <p className="text-xl px-4 text-center">
@@ -30,7 +30,7 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
                 secure checkout.
               </p>
             </div>
-            <div className="w-1/3 px-4">
+            <div className="lg:w-1/3 py-5 px-4">
               <LiaShippingFastSolid className="text-5xl md:text-7xl mx-auto" />
               <p className="text-3xl py-5 text-center italic">Step 2.</p>
               <p className="text-xl px-4 text-center">
@@ -38,7 +38,7 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
                 to you. Expect your sea moss gel within 3 - 5 business days.
               </p>
             </div>
-            <div className="w-1/3 px-4">
+            <div className="lg:w-1/3 py-5 px-4">
               <BiHappyHeartEyes className="text-5xl md:text-7xl mx-auto" />
               <p className="text-3xl py-5 text-center italic">Step 3.</p>
               <p className="text-xl px-4 text-center">
@@ -55,7 +55,7 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
       </section>
       <section>
         <div className="container max-w-9xl mx-auto my-10 lg:my-24 px-4">
-          <h2 className="text-3xl lg:text-5xl mx-auto mb-4 max-w-2xl">
+          <h2 className="text-3xl lg:text-5xl mx-auto mb-4 max-w-2xl leading-relaxed">
             <span className="flex justify-center items-center">
               <Image
                 src={soursopEmoji}

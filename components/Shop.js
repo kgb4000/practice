@@ -42,9 +42,9 @@ export default async function Shop() {
   return (
     <>
       <section>
-        <div className="lg:my-36 px-8">
+        <div className="my-14 lg:my-36 px-8">
           <h2 className="text-4xl lg:text-5xl leading-relaxed my-5 text-center">
-            Explore Our Products
+            Featured Products
           </h2>
           <p className="text-xl text-center max-w-2xl mx-auto mb-16">
             Our products include dried sea moss, sea moss gels, and capsules,
