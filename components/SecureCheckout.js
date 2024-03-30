@@ -5,7 +5,6 @@ const SecureCheckout = () => {
   return (
     <>
       <div className="flex justify-between items-center pt-2">
-        <p className="text-[0.8rem]">🔐 Secure Checkout</p>
         <Image
           src="/icons/visa.png"
           alt="Visa"
@@ -46,6 +45,7 @@ const SecureCheckout = () => {
             height: 'auto',
           }}
         />
+        <p className="text-[0.8rem]">🔐 Secure Checkout</p>
       </div>
     </>
   )

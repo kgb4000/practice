@@ -71,7 +71,7 @@ const AddToCart = ({ priceOfOne, product }) => {
     <>
       <div className="max-w-[400px] mx-auto my-10">
         <button
-          className="px-4 py-5 rounded-xl w-full text-xl font-bold bg-yellow-300 hover:bg-yellow-400 snipcart-add-item"
+          className="px-4 py-5 rounded-xl w-full text-xl font-bold bg-yellow-300 hover:bg-yellow-400 snipcart-add-item hover:shadow-xl"
           onClick={handleAddToCart}
           data-item-id={product.id}
           data-item-price={calculateDiscountedPrice().toFixed(2)}

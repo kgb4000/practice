@@ -1,6 +1,10 @@
 import React from 'react'
+import { addDays, format } from 'date-fns'
 
 const Shipping = () => {
+  let currentDate = new Date()
+  let futureDate = addDays(currentDate, 7)
+
   return (
     <>
       <div className="border py-6 px-4 rounded-2xl mt-4">
@@ -11,18 +15,14 @@ const Shipping = () => {
           ⭐ 90 Day Money Back Guarantee
         </p>
         <p className="uppercase text-[0.8rem] pb-2">
-          🚀 Fast 3 - 5 Day Shipping
+          🚀 Fast Shipping (3 - 5 Business Days)
         </p>
-        <p className="uppercase text-[0.8rem] pb-2">
-          📧 24 Hour Customer Service
-        </p>
-        {/* <p className="uppercase text-[0.8rem]">
+        <p className="uppercase text-[0.8rem]">
           🚚 Order today receive by{' '}
           <span className="font-bold underline text-red-500">
-            {/* {new Date().getMonth() + 1} / {new Date().getDate() + 6} /{' '}
-            {new Date().getFullYear()} 
+            {format(futureDate, 'MMMM do')}
           </span>
-        </p> */}
+        </p>
       </div>
     </>
   )

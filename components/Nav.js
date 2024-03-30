@@ -5,6 +5,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import logo from '../public/images/smw-logo-black.png'
 import Image from 'next/image'
+import { IoCartOutline } from 'react-icons/io5'
 
 const navigation = [
   { name: 'Shop', href: '/shop' },
@@ -21,7 +22,7 @@ const Nav = () => {
       <header>
         <div className="fixed w-full bg-gray-600 items-center justify-around text-white top-0 py-4 hidden md:flex uppercase text-[0.8rem]">
           <p>🇺🇸 Made in the USA </p>
-          <p>🔰 Safe Secure Checkout</p>
+          <p>🔐 Safe Secure Checkout</p>
           <p>⭐ 15% Off Everything</p>
           <p>🚚 Fast Shipping</p>
           <p>💵 Money Back Guarantee</p>
@@ -45,8 +46,8 @@ const Nav = () => {
                   />
                 </Link>
               </div>
-              <button className="snipcart-checkout font-bold lg:hidden">
-                Cart
+              <button className="snipcart-checkout font-bold flex items-center lg:hidden">
+                <IoCartOutline className="text-2xl" />
                 <span className="snipcart-items-count p-2"></span>
               </button>
               <div className="flex lg:hidden">
@@ -71,8 +72,8 @@ const Nav = () => {
                 ))}
               </div>
               <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                <button className="snipcart-checkout font-bold">
-                  Cart
+                <button className="snipcart-checkout font-bold flex items-center">
+                  <IoCartOutline className="text-2xl" />
                   <span className="snipcart-items-count p-2"></span>
                 </button>
               </div>

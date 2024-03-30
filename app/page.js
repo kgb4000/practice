@@ -10,6 +10,7 @@ import CallToAction from '@/components/CallToAction'
 import Hero from '@/components/Hero'
 import OurCompany from '@/components/OurCompany'
 import HeroImage from '@/public/images/ocean-bg.webp'
+import Transforamtion from '@/components/Transforamtion'
 
 export const metadata = {
   title: 'Buy Premium Sea Moss Products Online | Sea Moss Wellness',
@@ -25,14 +26,14 @@ export default function Home() {
     <>
       <Hero
         backgroundHeight="lg:h-[100vh]"
-        padding="py-[8rem] sm:py-[10rem] md:py-[20rem] lg:pl-[14rem]"
+        padding="py-[8rem] sm:py-[10rem] md:py-[10rem] lg:pl-[14rem]"
         heroMarginBottom="mb-20 lg:mb-40"
         heroText="Premium Organic Sea Moss"
         subText="Buy dreid sea moss and infused sea moss gels to Help Improve your health"
         buttonText="Shop Now"
         buttonLink="/shop"
       />
-      {/* <OurCompany /> */}
+      <Transforamtion />
       <Shop />
       <section className="bg-yellow-100 py-10">
         <div className="container max-w-7xl mx-auto lg:my-20">
@@ -68,13 +69,26 @@ export default function Home() {
               <p className="md:text-xl mb-4 leading-loose">
                 <b>Reduced Risk of Chronic Diseases:</b> Studies show that
                 people who eat more plant-based foods lower the risk of
-                developing chronic diseases like heart disease, diabetes, and
-                certain cancers.
+                developing chronic diseases like heart disease,{' '}
+                <Link
+                  href="sea-moss-for-diabetes"
+                  className="text-red-500 underline"
+                >
+                  diabetes
+                </Link>
+                , and certain cancers.
               </p>
               <p className="md:text-xl mb-4 leading-loose">
                 <b>Heart Health:</b> A diet rich in fruits, vegetables, legumes,
-                and whole grains can lower blood pressure, reduce cholesterol
-                levels, and decrease the risk of heart disease.
+                and whole grains can lower{' '}
+                <Link
+                  href="sea-moss-blood-pressure"
+                  className="text-red-500 underline"
+                >
+                  blood pressure
+                </Link>
+                , reduce cholesterol levels, and decrease the risk of heart
+                disease.
               </p>
               <p className="md:text-xl mb-4 leading-loose">
                 <b> Blood Sugar Control:</b> High-fiber foods can help regulate
