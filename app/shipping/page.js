@@ -14,8 +14,10 @@ const ShippingPolicy = () => {
   return (
     <>
       <section>
-        <div className="container max-w-3xl mx-auto my-40 px-6">
-          <h1 className="text-5xl my-8 text-center">Shipping Policy</h1>
+        <div className="container max-w-9xl mx-auto lg:px-0 pt-20 md:pt-36 pb-16 px-4">
+          <h1 className="text-4xl lg:text-5xl mb-8 text-center">
+            Shipping Policy
+          </h1>
           <p className="text-xl mb-4">
             At Sea Moss Wellness, we are dedicated to providing you with
             exceptional service from the moment you place your order to the

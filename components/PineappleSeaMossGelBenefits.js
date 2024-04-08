@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import soursopGel from '@/public/images/soursop-sea-moss-gel.png'
+import pineappleGel from '@/public/images/soursop-sea-moss-gel.png'
 import AddToCart from './AddToCart'
 import logo from '@/public/images/smw-logo-black.png'
 import soursopEmoji from '@/public/icons/soursop.png'
@@ -9,10 +9,10 @@ import { IoCartOutline } from 'react-icons/io5'
 import { LiaShippingFastSolid } from 'react-icons/lia'
 import { BiHappyHeartEyes } from 'react-icons/bi'
 
-const SoursopBenefits = ({ priceOfOne, product }) => {
+const PineappleSeamossGelbenefits = ({ priceOfOne, product }) => {
   return (
     <>
-      <section className="bg-gray-100 py-4">
+      <section>
         <div className="container max-w-9xl mx-auto my-10 lg:my-24 px-4">
           <h2 className="text-3xl lg:text-5xl mx-auto text-center mb-4 max-w-2xl leading-relaxed">
             Boost Your Health & Energy In 3 Simple Steps
@@ -57,14 +57,14 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
         <div className="container max-w-9xl mx-auto my-10 lg:my-24 px-4">
           <h2 className="text-3xl lg:text-5xl mx-auto mb-4 max-w-2xl leading-relaxed">
             <span className="flex justify-center items-center">
-              <Image
+              {/* <Image
                 src={soursopEmoji}
                 width={70}
                 height={70}
                 alt="Soursop emogi."
                 style={{ maxWidth: '100%', height: 'auto' }}
-              />{' '}
-              Soursop Sea Moss Gel Health Benefits
+              />{' '} */}
+              🍍 Pineapple Sea Moss Gel Health Benefits
             </span>
           </h2>
           <p className="text-[1.1rem] max-w-3xl mx-auto text-center mb-4 md:text-xl">
@@ -121,8 +121,8 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
               </div>
             </div>
             <Image
-              src={soursopGel}
-              alt="Soursop sea moss gel."
+              src={pineappleGel}
+              alt="Pineapple sea moss gel."
               width={500}
               height={500}
               className="mx-auto lg:self-center"
@@ -199,7 +199,7 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
                 <p className="text-2xl font-semibold">Sea Moss Wellness</p>
               </div>
               <div className="my-2">
-                <p className="py-2">✅ Real Organic Soursop.</p>
+                <p className="py-2">✅ Real Organic Pineapple.</p>
                 <p className="py-2">
                   ✅ Authentic Wild-Harvested Sea Moss from St. Lucia.
                 </p>
@@ -216,8 +216,8 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
               </div>
             </div>
             <Image
-              src={soursopGel}
-              alt="Soursop sea moss gel."
+              src={pineappleGel}
+              alt="Pineapple sea moss gel."
               width={400}
               height={400}
               className="md:w-1/3 mx-auto my-10"
@@ -230,7 +230,7 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
                 <p className="py-2">❌ Fake Pool Grown Sea Moss.</p>
                 <p className="py-2">❌ Made in home kitchen.</p>
                 <p className="py-2">❌ Using Artificial Preservatives.</p>
-                <p className="py-2">❌ Long Processing and Shipping Times</p>
+                <p className="py-2">❌ Long Shipping Times</p>
                 <p className="py-2">❌ No Third party Testing</p>
               </div>
             </div>
@@ -242,4 +242,4 @@ const SoursopBenefits = ({ priceOfOne, product }) => {
   )
 }
 
-export default SoursopBenefits
+export default PineappleSeamossGelbenefits

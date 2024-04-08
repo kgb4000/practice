@@ -18,6 +18,7 @@ import StrawberrySeaMossGelBenefits from '@/components/StrawberrySeaMossGelBenef
 import Check from '@/public/icons/check.webp'
 import AddToCart from '@/components/AddToCart'
 import FloatingButton from '@/components/FloatingButton'
+import PineappleSeamossGelbenefits from '@/components/PineappleSeamossGelBenefits'
 
 export async function getProductSlug(slug) {
   const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT, {
@@ -177,6 +178,11 @@ export default async function Product({ params }) {
         <SoursopBenefits product={product} priceOfOne={priceOfOne} />
       ) : product.slug.includes('strawberry-sea-moss-gel') ? (
         <StrawberrySeaMossGelBenefits
+          product={product}
+          priceOfOne={priceOfOne}
+        />
+      ) : product.slug.includes('pineapple-sea-moss-gel') ? (
+        <PineappleSeamossGelbenefits
           product={product}
           priceOfOne={priceOfOne}
         />

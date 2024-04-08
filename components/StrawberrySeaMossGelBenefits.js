@@ -206,7 +206,7 @@ const StrawberrySeaMossGelBenefits = ({ priceOfOne, product }) => {
                 <p className="py-2">
                   ✅ No Artificial Additives or Preservatives.
                 </p>
-                <p className="py-2">✅ Fast Shipping Times.</p>
+                <p className="py-2">✅ Fast Processing and Shipping Times.</p>
               </div>
             </div>
             <Image
@@ -223,9 +223,7 @@ const StrawberrySeaMossGelBenefits = ({ priceOfOne, product }) => {
                 <p className="py-2">❌ Bulk Fake Pool Grown Sea Moss.</p>
                 <p className="py-2">❌ Made In Cloud Kitchens.</p>
                 <p className="py-2">❌ Using Artificial Preservatives.</p>
-                <p className="py-2">❌ Long Shipping Times</p>
-                <p className="py-2">❌ Real Soursop</p>
-                <p className="py-2">❌ Real Soursop</p>
+                <p className="py-2">❌ Long Processing and Shipping Times</p>
               </div>
             </div>
           </div>

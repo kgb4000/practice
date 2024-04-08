@@ -15,7 +15,7 @@ const HeroSection = ({
   return (
     <>
       <section className="bg-green-600">
-        <div className={`${backgroundHeight} ${heroMarginBottom}`}>
+        <div>
           {/* <Image
             src={backgroundImage}
             alt={alt}
@@ -23,13 +23,16 @@ const HeroSection = ({
             objectFit="cover"
             fill
           /> */}
-          <div
-            className={`max-w-5xl flex flex-col justify-center ${padding} px-12 text-white`}
-          >
-            <h1 className="text-7xl md:text-8xl lg:text-9xl pb-6">
+          <div className="lg:h-[100vh] text-white py-32 px-4 md:pt-44 md:pb-24 md:pl-14 lg:mt-8">
+            {/* backgroundHeight="lg:h-[100vh]" padding="py-[10rem] sm:py-[12rem]
+            md:py-[10rem] md:pl-[8rem] lg:pl-[14rem] xl:py-[20rem]"
+            heroMarginBottom="mb-20 lg:mb-40" */}
+            <h1 className="text-6xl lg:text-9xl pb-6 lg:max-w-5xl">
               {heroText}
             </h1>
-            <p className="text-xl lg:text-2xl pb-4 uppercase">{subText}</p>
+            <p className="text-xl lg:text-2xl pb-4 uppercase lg:max-w-xl">
+              {subText}
+            </p>
             {buttonText && (
               <div className="md:flex items-center">
                 <Link href={buttonLink}>

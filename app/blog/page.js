@@ -37,7 +37,7 @@ export default async function Blog() {
   return (
     <>
       <section>
-        <div className="container max-w-9xl mx-auto px-8 py-44">
+        <div className="container max-w-9xl mx-auto lg:px-0 pt-20 md:pt-36 pb-16 px-4">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl mb-8">Blog</h1>
             {/* <p className="text-xl mb-8">
@@ -51,7 +51,7 @@ export default async function Blog() {
                   <div className="max-w-4xl mx-auto flex flex-col lg:flex-row lg:items-center mb-14">
                     <Image
                       src={buildImage(post.coverImage.public_id).toURL()}
-                      alt={post.coverImage.atlText}
+                      alt={post.title}
                       loading="lazy"
                       title={post.title}
                       width={400}
@@ -62,7 +62,7 @@ export default async function Blog() {
                       }}
                       className="mb-4 lg:mr-8 w-1/5"
                     />
-                    <div className="blog-info max-w-3xl w-4/5">
+                    <div className="blog-info lg:max-w-3xl lg:w-4/5">
                       <h2 className="text-2xl mb-5 max-w-2xl lg:text-4xl lg:leading-10">
                         {post.title}
                       </h2>
