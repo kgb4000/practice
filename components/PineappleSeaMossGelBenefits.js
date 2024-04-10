@@ -12,7 +12,7 @@ import { BiHappyHeartEyes } from 'react-icons/bi'
 const PineappleSeamossGelbenefits = ({ priceOfOne, product }) => {
   return (
     <>
-      <section>
+      {/* <section>
         <div className="container max-w-9xl mx-auto my-10 lg:my-24 px-4">
           <h2 className="text-3xl lg:text-5xl mx-auto text-center mb-4 max-w-2xl leading-relaxed">
             Boost Your Health & Energy In 3 Simple Steps
@@ -57,20 +57,13 @@ const PineappleSeamossGelbenefits = ({ priceOfOne, product }) => {
         <div className="container max-w-9xl mx-auto my-10 lg:my-24 px-4">
           <h2 className="text-3xl lg:text-5xl mx-auto mb-4 max-w-2xl leading-relaxed">
             <span className="flex justify-center items-center">
-              {/* <Image
-                src={soursopEmoji}
-                width={70}
-                height={70}
-                alt="Soursop emogi."
-                style={{ maxWidth: '100%', height: 'auto' }}
-              />{' '} */}
               🍍 Pineapple Sea Moss Gel Health Benefits
             </span>
           </h2>
           <p className="text-[1.1rem] max-w-3xl mx-auto text-center mb-4 md:text-xl">
-            Soursop sea moss gel combines the nutritional benefits of sea moss,
-            with the potent properties of soursop, a tropical fruit known for
-            its health benefits.
+            Our pineapple infused sea moss gel combines the nutritional benefits
+            of sea moss, with the potent properties of pineapples, a tropical
+            fruit known for its health benefits.
           </p>
           <div className="lg:grid grid-cols-3 md:py-8">
             <div>
@@ -237,7 +230,7 @@ const PineappleSeamossGelbenefits = ({ priceOfOne, product }) => {
           </div>
           <AddToCart product={product} priceOfOne={priceOfOne} />
         </div>
-      </section>
+      </section> */}
     </>
   )
 }
