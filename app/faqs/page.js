@@ -14,11 +14,11 @@ const FAQ = () => {
   return (
     <>
       <section>
-        <div className="conatainer max-w-3xl mx-auto pt-44 pb-20 px-8">
-          <h1 className="text-5xl text-center">
-            Sea Moss Frequently Asked Questions
+        <div className="container max-w-9xl mx-auto lg:px-0 pt-20 md:pt-36 pb-16 px-4">
+          <h1 className="text-4xl lg:text-5xl text-center">
+            Frequently Asked Questions
           </h1>
-          <div className="my-14">
+          <div className="my-14 max-w-3xl mx-auto">
             <div className="my-8">
               <h2 className="text-2xl lg:text-3xl leading-10 mb-5">
                 What is Sea Moss

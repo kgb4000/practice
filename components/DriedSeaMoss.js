@@ -92,13 +92,6 @@ const DriedSeaMoss = () => {
           </div>
         </div>
       </section>
-      {/* <section>
-        <div className="container max-w-9xl mx-auto mt-20 px-8">
-          <h2 className="text-5xl max-w-2xl mx-auto text-center my-10">
-            Questions and Answers
-          </h2>
-        </div>
-      </section> */}
     </>
   )
 }
