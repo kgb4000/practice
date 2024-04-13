@@ -103,7 +103,7 @@ export default async function Post({ params }) {
               content={post.content.json}
               renderers={{
                 h2: ({ children }) => (
-                  <h2 className="text-xl lg:text-4xl leading-relaxed font-bold lg:my-5">
+                  <h2 className="text-xl lg:text-4xl leading-relaxed font-bold my-4">
                     {children}
                   </h2>
                 ),
@@ -123,7 +123,7 @@ export default async function Post({ params }) {
                   </Link>
                 ),
                 p: ({ children }) => (
-                  <p className="lg:text-xl my-4 font-normal lg:my-6 leading-8 break-normal">
+                  <p className="lg:text-xl my-4 lg:my-6 leading-8">
                     {children}
                   </p>
                 ),
