@@ -49,12 +49,12 @@ const BlogSection = () => {
               </Link>
             </div>
             <div className="mb-10">
-              <Link href="/sea-moss-for-arthritis">
+              <Link href="/sea-moss-for-diabetes">
                 <Image
-                  src="https://res.cloudinary.com/browne-company/image/upload/v1704984715/seaMossWellnessBlogImages/se-moss-for-arthritis_oq1jca.jpg"
+                  src="https://res.cloudinary.com/browne-company/image/upload/v1710850771/seaMossWellnessBlogImages/is-sea-moss-good-for-diabetes_fnyunq.jpg"
                   width={700}
                   height={300}
-                  alt="Does Sea Moss Help With Arthritis and Joint Pain?"
+                  alt="Is Sea Moss Good For People WIth Diabetes?"
                   style={{
                     width: '100%',
                     height: 'auto',
@@ -62,7 +62,7 @@ const BlogSection = () => {
                   className="mb-4 max-w-xl mx-auto"
                 />
                 <p className="text-2xl text-center">
-                  Does Sea Moss Help With Arthritis and Joint Pain?
+                  Is Sea Moss Good For People WIth Diabetes?
                 </p>
               </Link>
             </div>
