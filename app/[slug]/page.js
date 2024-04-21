@@ -58,8 +58,20 @@ export default async function Post({ params }) {
   const posts = await getPostSlug(params.slug)
   const post = posts[0]
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    author: 'K. Browne',
+    name: post.title,
+    description: post.metaDescription,
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section>
         <div className="container max-w-[700px] mx-auto lg:px-0 pt-20 md:pt-36 pb-16 px-4">
           <div className="">

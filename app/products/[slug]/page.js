@@ -124,8 +124,26 @@ export default async function Product({ params }) {
   //   return <StrawberrySeaMossGelBenefits />
   // }
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.name,
+    image: product.image,
+    description: product.metaDescription,
+    offers: {
+      '@type': 'Offer',
+      availability: 'https://schema.org/InStock',
+      price: product.price,
+      priceCurrency: 'USD',
+    },
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section>
         <div className="container max-w-3xl lg:max-w-5xl mx-auto lg:px-0 mt-20 md:mt-32 mb-8">
           <div className="lg:flex">
